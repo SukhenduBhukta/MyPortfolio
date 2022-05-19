@@ -1,0 +1,225 @@
+.maincontainer .home .bgimg {
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: initial;
+     object-fit: initial;
+}
+
+.maincontainer .home .cover {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+}
+
+.maincontainer .home header {
+  position: fixed;
+  background: transparent;
+  overflow: hidden;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  right: 3rem;
+}
+
+.maincontainer .home header nav a {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 600;
+  margin: 1rem;
+}
+
+.maincontainer .home header nav :hover {
+  color: #dbff00;
+  border-bottom: 3px solid #3d50f5;
+}
+
+.maincontainer .home .logo {
+  position: fixed;
+  height: 8rem;
+  width: 8rem;
+}
+
+.maincontainer .home .landing {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.maincontainer .home .landing .photo {
+  position: relative;
+  top: 20%;
+  left: 15rem;
+  width: 35rem;
+  height: 40rem;
+  background: #e8e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.maincontainer .home .landing .photo .image {
+  height: 50rem;
+  width: 40rem;
+  -webkit-transform: translateY(-5rem);
+          transform: translateY(-5rem);
+}
+
+.maincontainer .home .landing .content {
+  width: 65%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  padding-left: 40rem;
+  padding-right: 0;
+}
+
+.maincontainer .home .landing .content .name {
+  padding-bottom: 43rem;
+  position: relative;
+  height: 5rem;
+}
+
+.maincontainer .home .landing .content .name h2 {
+  font-size: 7rem;
+  color: #fff;
+}
+
+.maincontainer .home .landing .content .name h2 span {
+  color: #b6b3b3;
+}
+
+.maincontainer .home .landing .content .details {
+  margin-top: -30rem;
+  color: #12FDD3;
+}
+
+.maincontainer .home .landing .content .details p {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.maincontainer .about {
+  height: 100vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0c0244), to(black));
+  background: linear-gradient(0deg, #0c0244, black);
+}
+
+.maincontainer .about h4 {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4rem;
+  padding: 2rem;
+}
+
+.maincontainer .skill {
+  height: 100vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0c0244), to(black));
+  background: linear-gradient(0deg, #0c0244, black);
+}
+
+.maincontainer .skill h4 {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4rem;
+  padding: 2rem;
+}
+
+.maincontainer .contact {
+  height: 100vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0c0244), to(black));
+  background: linear-gradient(0deg, #0c0244, black);
+}
+
+.maincontainer .contact h4 {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4rem;
+  padding: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+input,
+select {
+  border: none;
+  outline: none;
+}
+
+select {
+  cursor: pointer;
+}
+
+a {
+  text-transform: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+i {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */

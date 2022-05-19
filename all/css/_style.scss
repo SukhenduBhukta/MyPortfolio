@@ -1,0 +1,131 @@
+.maincontainer {
+  .home {
+    .bgimg {
+      height: 100vh;
+      width: 100%;
+      object-fit: initial;
+    }
+    .cover {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      top: 0;
+    }
+    header {
+      position: fixed;
+      background: transparent;
+      overflow: hidden;
+      padding-top: 2.5rem;
+      padding-bottom: 1rem;
+      right: 3rem;
+      nav {
+        a {
+          font-size: 1.8rem;
+          color: white;
+          font-weight: 600;
+          margin: 1rem;
+        }
+        :hover {
+          color: #dbff00;
+          border-bottom: 3px solid #3d50f5;
+        }
+      }
+    }
+    .logo {
+      position: fixed;
+      height: 8rem;
+      width: 8rem;
+    }
+    .landing{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .photo{
+        position: relative;
+        top: 20%;
+        left: 15rem;
+        width: 35rem;
+        height: 40rem;
+        background: #e8e4e4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .image{
+          height: 50rem;
+          width: 40rem;
+          transform: translateY(-5rem);
+        }
+      }
+      .content{
+        width: 65%;
+        display: grid;
+        grid-template-columns: auto;
+        padding-left: 40rem;
+        padding-right: 0;
+        .name{
+          padding-bottom: 43rem;
+          position: relative;
+          height: 5rem;
+          h2{
+            font-size: 7rem;
+            color: #fff;
+            
+            span{
+              color: #b6b3b3;
+            }
+          }
+        }
+        .details{
+          margin-top: -30rem;
+          color: #12FDD3;
+          p{
+            font-size: 2.2rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .about{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(0deg,rgb(12, 2, 68),rgb(0, 0, 0));
+    h4{
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      padding: 2rem;
+    }
+  }
+  .skill{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(0deg,rgb(12, 2, 68),rgb(0, 0, 0));
+    h4{
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      padding: 2rem;
+    }
+  }
+  .contact{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(0deg,rgb(12, 2, 68),rgb(0, 0, 0));
+    h4{
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      padding: 2rem;
+    }
+  }
+}
