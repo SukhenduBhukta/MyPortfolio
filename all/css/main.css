@@ -3,6 +3,7 @@
   height: 5rem;
   width: 100%;
   background: transparent;
+  z-index: 100;
 }
 
 .maincontainer .head header {
@@ -28,9 +29,11 @@
   right: 0;
   top: 1rem;
   height: 5rem;
+  width: 35%;
   display: inline;
   background: transparent;
   position: fixed;
+  z-index: 100;
 }
 
 .maincontainer .head header nav li {
@@ -46,35 +49,14 @@
   color: #eee;
 }
 
-.maincontainer .head header nav li :hover {
+.maincontainer .head header nav li a:hover {
   border-bottom: 2px solid #00ffae;
   color: #d0ff00;
 }
 
-.maincontainer .head header .btn {
-  height: 3.7rem;
-  width: 11rem;
-  border-radius: 0.5rem;
-  border: 1px solid #00ffae;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-animation: animate2 5s ease-in-out infinite;
-          animation: animate2 5s ease-in-out infinite;
-  -webkit-transition-delay: -2s;
-          transition-delay: -2s;
-}
-
-.maincontainer .head header .btn button {
-  position: relative;
-  right: 0.5rem;
-  bottom: 0.5rem;
+.maincontainer .head header nav a button {
+  position: absolute;
+  right: .1rem;
   padding: 0.5rem 2rem;
   border: none;
   border: 1px solid #00ffae;
@@ -82,20 +64,18 @@
   color: #fff;
   font-weight: 450;
   margin: 0 3rem;
+  margin-left: 5rem;
   cursor: pointer;
   border-radius: 0.5rem;
   background: transparent;
-  -webkit-animation: animate2 5s ease infinite;
-          animation: animate2 5s ease infinite;
+  -webkit-animation: animate2 5s ease-in-out infinite;
+          animation: animate2 5s ease-in-out infinite;
 }
 
-.maincontainer .head header .btn button:hover {
+.maincontainer .head header nav a button:hover {
   background: rgba(255, 255, 255, 0.2);
-  right: 0;
-  bottom: 0;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
-  border: none;
 }
 
 .maincontainer .home {
@@ -142,12 +122,12 @@
 }
 
 .maincontainer .home .icon .social .social::after {
-  content: '';
+  content: "";
 }
 
 .maincontainer .home .icon .social li {
   list-style: none;
-  padding-top: 3rem;
+  padding-bottom: 3.4rem;
 }
 
 .maincontainer .home .icon .social li a i {
@@ -159,14 +139,16 @@
   color: #00ffae;
   -webkit-transform: translateY(-0.5rem);
           transform: translateY(-0.5rem);
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.15);
+          box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.15);
 }
 
 .maincontainer .home .icon .line {
   position: absolute;
   bottom: 0rem;
-  height: 10rem;
+  height: 11rem;
   width: 1px;
   background: rgba(255, 255, 255, 0.5);
 }
@@ -179,7 +161,7 @@
 .maincontainer .home .details h4 {
   position: absolute;
   top: 23rem;
-  left: 30rem;
+  left: 35rem;
   font-size: 2rem;
   font-weight: 400;
   color: #00ffae;
@@ -187,8 +169,8 @@
 
 .maincontainer .home .details h2 {
   position: absolute;
-  top: 25rem;
-  left: 30rem;
+  top: 26rem;
+  left: 35rem;
   font-size: 7rem;
   font-weight: 600;
   color: #fff;
@@ -196,8 +178,8 @@
 
 .maincontainer .home .details h3 {
   position: absolute;
-  top: 33rem;
-  left: 30rem;
+  top: 34rem;
+  left: 35rem;
   font-size: 7rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.5);
@@ -205,8 +187,8 @@
 
 .maincontainer .home .details .para {
   position: absolute;
-  top: 43rem;
-  left: 30rem;
+  top: 44rem;
+  left: 35rem;
   height: 30rem;
   width: 50rem;
 }
@@ -251,7 +233,7 @@
 
 .maincontainer .home .mail a {
   position: absolute;
-  bottom: 24rem;
+  bottom: 26rem;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   font-size: 1.6rem;
@@ -265,7 +247,7 @@
 .maincontainer .home .mail .line {
   position: absolute;
   bottom: 0rem;
-  height: 10rem;
+  height: 11rem;
   width: 1px;
   background: rgba(255, 255, 255, 0.5);
 }
@@ -295,13 +277,13 @@
 }
 
 .maincontainer .about h4::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 2.2rem;
   -webkit-transform: translateX(2rem);
           transform: translateX(2rem);
   height: 1px;
-  width: 30rem;
+  width: 32rem;
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -321,13 +303,92 @@
 .maincontainer .about .detail .abt {
   height: 20rem;
   width: 50rem;
-  background: #fff;
+  margin-right: 3.5rem;
+}
+
+.maincontainer .about .detail .abt p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  padding-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.maincontainer .about .detail .abt p span {
+  color: #00ffae;
+}
+
+.maincontainer .about .detail .abt table {
+  margin-left: 5rem;
+}
+
+.maincontainer .about .detail .abt table tr td {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 0.5rem;
+  padding-right: 5rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.maincontainer .about .detail .abt table tr td i {
+  font-size: 1rem;
+  padding-right: 0.5rem;
+  color: #00ffae;
 }
 
 .maincontainer .about .detail .pic {
+  margin-top: 11rem;
   height: 30rem;
   width: 30rem;
-  background: #f758f7;
+  border: 1px solid #00ffae;
+  border-radius: 0.5rem;
+}
+
+.maincontainer .about .detail .pic .ima {
+  position: relative;
+  height: 30rem;
+  width: 30rem;
+  border-radius: 0.5rem;
+  background: #bbbbbb;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-filter: sepia(1);
+          filter: sepia(1);
+  z-index: 1;
+}
+
+.maincontainer .about .detail .pic .ima:hover {
+  -webkit-filter: sepia(0);
+          filter: sepia(0);
+}
+
+.maincontainer .skill {
+  height: 100vh;
+  width: 100%;
+  background: #061337;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.maincontainer .contact {
+  height: 100vh;
+  width: 100%;
+  background: #1d41a4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @-webkit-keyframes animate {

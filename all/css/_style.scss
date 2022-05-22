@@ -4,6 +4,7 @@
     height: 5rem;
     width: 100%;
     background: transparent;
+    z-index: 100;
     header {
       position: fixed;
       background: rgb(6, 19, 55);
@@ -22,9 +23,11 @@
         right: 0;
         top: 1rem;
         height: 5rem;
+        width: 35%;
         display: inline;
         background: transparent;
         position: fixed;
+        z-index: 100;
         li {
           list-style: none;
           display: inline;
@@ -35,46 +38,36 @@
             font-weight: 500;
             color: #eee;
           }
-          :hover {
+          a:hover {
             border-bottom: 2px solid #00ffae;
             color: #d0ff00;
           }
         }
+
+          a{
+            button {
+              position: absolute;
+              right: .1rem;
+              padding: 0.5rem 2rem;
+              border: none;
+              border: 1px solid #00ffae;
+              font-size: 2rem;
+              color: #fff;
+              font-weight: 450;
+              margin: 0 3rem;
+              margin-left: 5rem;
+              cursor: pointer;
+              border-radius: 0.5rem;
+              background: transparent;
+              animation: animate2 5s ease-in-out infinite;
+            }
+            button:hover {
+              background: rgba(255, 255, 255, 0.2);
+              transition-duration: 0.5s;
+            }
+          }
       }
-      .btn {
-        height: 3.7rem;
-        width: 11rem;
-        border-radius: 0.5rem;
-        border: 1px solid #00ffae;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: animate2 5s ease-in-out infinite;
-        transition-delay: -2s;
-        button {
-          position: relative;
-          right: 0.5rem;
-          bottom: 0.5rem;
-          padding: 0.5rem 2rem;
-          border: none;
-          border: 1px solid #00ffae;
-          font-size: 2rem;
-          color: #fff;
-          font-weight: 450;
-          margin: 0 3rem;
-          cursor: pointer;
-          border-radius: 0.5rem;
-          background: transparent;
-          animation: animate2 5s ease infinite;
-        }
-        button:hover {
-          background: rgba(255, 255, 255, 0.2);
-          right: 0;
-          bottom: 0;
-          transition-duration: 0.5s;
-          border: none;
-        }
-      }
+      
     }
   }
   .home {
@@ -98,32 +91,32 @@
         display: inline;
         align-items: center;
         justify-content: center;
-        .social::after{
-          content: '';
-          
+        .social::after {
+          content: "";
         }
         li {
           list-style: none;
-          padding-top: 3rem;
-          a{
+          padding-bottom: 3.4rem;
+          a {
             i {
               font-size: 2.5rem;
               color: rgba(255, 255, 255, 0.5);
             }
-            i:hover{
+            i:hover {
               color: #00ffae;
-              transform: translateY(-.5rem);
-              transition-duration: .5s;
+              transform: translateY(-0.5rem);
+              transition-duration: 0.5s;
+              box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.15);
             }
           }
         }
       }
-      .line{
+      .line {
         position: absolute;
         bottom: 0rem;
-          height: 10rem;
-          width: 1px;
-          background: rgba(255, 255, 255, 0.5);
+        height: 11rem;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.5);
       }
     }
     .details {
@@ -132,31 +125,31 @@
       h4 {
         position: absolute;
         top: 23rem;
-        left: 30rem;
+        left: 35rem;
         font-size: 2rem;
         font-weight: 400;
         color: #00ffae;
       }
       h2 {
         position: absolute;
-        top: 25rem;
-        left: 30rem;
+        top: 26rem;
+        left: 35rem;
         font-size: 7rem;
         font-weight: 600;
         color: #fff;
       }
       h3 {
         position: absolute;
-        top: 33rem;
-        left: 30rem;
+        top: 34rem;
+        left: 35rem;
         font-size: 7rem;
         font-weight: 600;
         color: rgba(255, 255, 255, 0.5);
       }
-      .para{
+      .para {
         position: absolute;
-        top: 43rem;
-        left: 30rem;
+        top: 44rem;
+        left: 35rem;
         height: 30rem;
         width: 50rem;
         p {
@@ -189,20 +182,20 @@
       justify-content: center;
       a {
         position: absolute;
-        bottom: 24rem;
+        bottom: 26rem;
         transform: rotate(90deg);
         font-size: 1.6rem;
         color: rgba(255, 255, 255, 0.4);
       }
-      :hover{
+      :hover {
         color: #00ffae;
       }
-      .line{
+      .line {
         position: absolute;
         bottom: 0rem;
-          height: 10rem;
-          width: 1px;
-          background: rgba(255, 255, 255, 0.5);
+        height: 11rem;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.5);
       }
     }
   }
@@ -213,38 +206,96 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    h4{
+    h4 {
       position: absolute;
       left: 35rem;
       transform: translateY(-15rem);
       font-size: 3rem;
       color: #fff;
     }
-    h4::after{
-      content: '';
+    h4::after {
+      content: "";
       position: absolute;
       top: 2.2rem;
       transform: translateX(2rem);
       height: 1px;
-      width: 30rem;
+      width: 32rem;
       background: rgba(255, 255, 255, 0.3);
     }
-    .detail{
+    .detail {
       position: absolute;
       display: flex;
       justify-content: center;
       align-items: center;
-      .abt{
+      .abt {
         height: 20rem;
         width: 50rem;
-        background: #fff;
+        margin-right: 3.5rem;
+        p {
+          font-size: 1.7rem;
+          font-weight: 400;
+          padding-bottom: 2rem;
+          color: rgba(255, 255, 255, 0.4);
+          span {
+            color: #00ffae;
+          }
+        }
+        table {
+          margin-left: 5rem;
+          tr {
+            td {
+              font-size: 1.4rem;
+              font-weight: 400;
+              padding: 0.5rem;
+              padding-right: 5rem;
+              color: rgba(255, 255, 255, 0.4);
+              i {
+                font-size: 1rem;
+                padding-right: 0.5rem;
+                color: #00ffae;
+              }
+            }
+          }
+        }
       }
-      .pic{
+      .pic {
+        margin-top: 11rem;
         height: 30rem;
         width: 30rem;
-        background: #f758f7;
+        border: 1px solid #00ffae;
+        border-radius: 0.5rem;
+        .ima {
+          position: relative;
+          height: 30rem;
+          width: 30rem;
+          border-radius: 0.5rem;
+          background: #bbbbbb;
+          overflow: hidden;
+          cursor: pointer;
+          filter: sepia(1);
+          z-index: 1;
+        }
+        .ima:hover {
+          filter: sepia(0);
+        }
       }
     }
+  }
+  .skill {
+    height: 100vh;
+    width: 100%;
+    background: rgb(6, 19, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact {
+    height: 100vh;
+    width: 100%;
+    background: rgb(29, 65, 164);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 @keyframes animate {
