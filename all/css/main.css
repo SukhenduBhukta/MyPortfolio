@@ -161,7 +161,7 @@
 .maincontainer .home .details h4 {
   position: absolute;
   top: 23rem;
-  left: 35rem;
+  left: 23%;
   font-size: 2rem;
   font-weight: 400;
   color: #00ffae;
@@ -170,7 +170,7 @@
 .maincontainer .home .details h2 {
   position: absolute;
   top: 26rem;
-  left: 35rem;
+  left: 23%;
   font-size: 7rem;
   font-weight: 600;
   color: #fff;
@@ -179,7 +179,7 @@
 .maincontainer .home .details h3 {
   position: absolute;
   top: 34rem;
-  left: 35rem;
+  left: 23%;
   font-size: 7rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.5);
@@ -188,7 +188,7 @@
 .maincontainer .home .details .para {
   position: absolute;
   top: 44rem;
-  left: 35rem;
+  left: 23%;
   height: 30rem;
   width: 50rem;
 }
@@ -237,6 +237,7 @@
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   font-size: 1.6rem;
+  letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.4);
 }
 
@@ -273,6 +274,7 @@
   -webkit-transform: translateY(-15rem);
           transform: translateY(-15rem);
   font-size: 3rem;
+  letter-spacing: 2px;
   color: #fff;
 }
 
@@ -376,10 +378,31 @@
           align-items: center;
 }
 
+.maincontainer .skill h4 {
+  position: absolute;
+  left: 35rem;
+  letter-spacing: 2px;
+  -webkit-transform: translateY(-15rem);
+          transform: translateY(-15rem);
+  font-size: 3rem;
+  color: #fff;
+}
+
+.maincontainer .skill h4::after {
+  content: "";
+  position: absolute;
+  top: 2.2rem;
+  -webkit-transform: translateX(2rem);
+          transform: translateX(2rem);
+  height: 1px;
+  width: 80rem;
+  background: rgba(255, 255, 255, 0.3);
+}
+
 .maincontainer .contact {
   height: 100vh;
   width: 100%;
-  background: #1d41a4;
+  background: #061337;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
