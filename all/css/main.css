@@ -79,7 +79,7 @@
 }
 
 .maincontainer .home {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: #061337;
   display: -webkit-box;
@@ -254,7 +254,7 @@
 }
 
 .maincontainer .about {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: #061337;
   display: -webkit-box;
@@ -382,8 +382,8 @@
   position: absolute;
   left: 35rem;
   letter-spacing: 2px;
-  -webkit-transform: translateY(-15rem);
-          transform: translateY(-15rem);
+  -webkit-transform: translateY(-32rem);
+          transform: translateY(-32rem);
   font-size: 3rem;
   color: #fff;
 }
@@ -395,7 +395,7 @@
   -webkit-transform: translateX(2rem);
           transform: translateX(2rem);
   height: 1px;
-  width: 80rem;
+  width: 75rem;
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -407,16 +407,18 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin-top: 10rem;
 }
 
 .maincontainer .skill .cardcontainer .card {
-  position: absolute;
-  height: 33rem;
-  width: 25rem;
+  height: 28rem;
+  width: 23rem;
+  margin: 3rem;
   border-radius: 0rem;
-  background: rgba(0, 213, 255, 0.15);
+  background: transparent;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  cursor: pointer;
 }
 
 .maincontainer .skill .cardcontainer .card .name {
@@ -452,7 +454,7 @@
 }
 
 .maincontainer .contact {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: #061337;
   display: -webkit-box;
@@ -464,6 +466,267 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.maincontainer .contact h4 {
+  position: absolute;
+  left: 35rem;
+  letter-spacing: 2px;
+  -webkit-transform: translateY(-28rem);
+          transform: translateY(-28rem);
+  font-size: 3rem;
+  color: #fff;
+}
+
+.maincontainer .contact h4::after {
+  content: "";
+  position: absolute;
+  top: 2.2rem;
+  -webkit-transform: translateX(2rem);
+          transform: translateX(2rem);
+  height: 1px;
+  width: 75rem;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.maincontainer .contact .word {
+  width: 50%;
+  top: 0;
+}
+
+.maincontainer .contact .word p {
+  padding-left: 20rem;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.maincontainer .contact .word p span {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.maincontainer .contact .getintch {
+  width: 50%;
+  height: 100%;
+}
+
+.maincontainer .contact .getintch .wrapper {
+  height: 100%;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.maincontainer .contact .getintch .wrapper .inner {
+  padding: 2.5rem;
+  background: transparent;
+  -webkit-box-shadow: inset 3px 3px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 3px 3px 15px rgba(0, 0, 0, 0.5);
+  max-width: 80rem;
+  margin: auto;
+  border-radius: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+
+.maincontainer .contact .getintch .wrapper .inner form {
+  width: 100%;
+  padding-top: 4rem;
+  padding-left: 0;
+  padding-right: 3rem;
+  display: -ms-grid;
+  display: grid;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .form-group input {
+  width: 100%;
+  background-color: transparent;
+  caret-color: #00dafc;
+  color: #00dafc;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .form-group .form-control {
+  border: none;
+  border-bottom: 1px solid #e71de7;
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding-right: 0;
+  margin-bottom: 25px;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .form-wrapper {
+  position: relative;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .form-wrapper input {
+  background-color: transparent;
+  caret-color: #00dafc;
+  color: #00dafc;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .form-wrapper textarea {
+  background-color: transparent;
+  caret-color: #00dafc;
+  color: #00dafc;
+  letter-spacing: 2px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  max-width: 50rem;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .form-wrapper .form-control {
+  border: none;
+  border-bottom: 1px solid #e71de7;
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding-right: 0;
+  margin-bottom: 25px;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .buttdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .buttdiv button {
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: white;
+  background: linear-gradient(45deg, #dff304, #00ffbf);
+  -webkit-box-shadow: inset 4px 4px 6px rgba(255, 255, 255, 0.9), inset -4px -4px 6px rgba(0, 0, 0, 0.7);
+          box-shadow: inset 4px 4px 6px rgba(255, 255, 255, 0.9), inset -4px -4px 6px rgba(0, 0, 0, 0.7);
+  padding: .5rem 1.5rem;
+  padding-left: 0.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  border-radius: 1.6rem 0;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .buttdiv button span {
+  display: block;
+  margin-left: 0.3em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .buttdiv button svg {
+  display: block;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .buttdiv button:hover .svg-wrapper {
+  -webkit-animation: fly-1 0.6s ease-in-out infinite alternate;
+          animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .buttdiv button:hover svg {
+  -webkit-transform: translateX(1.8rem) rotate(45deg) scale(1.1);
+          transform: translateX(1.8rem) rotate(45deg) scale(1.1);
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .buttdiv button:hover span {
+  -webkit-transform: translateX(10rem);
+          transform: translateX(10rem);
+}
+
+.maincontainer .contact .getintch .wrapper .inner form .buttdiv button:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+@-webkit-keyframes fly-1 {
+  from {
+    -webkit-transform: translateY(0.3rem);
+            transform: translateY(0.3rem);
+  }
+  to {
+    -webkit-transform: translateY(-0.3rem);
+            transform: translateY(-0.3rem);
+  }
+}
+
+@keyframes fly-1 {
+  from {
+    -webkit-transform: translateY(0.3rem);
+            transform: translateY(0.3rem);
+  }
+  to {
+    -webkit-transform: translateY(-0.3rem);
+            transform: translateY(-0.3rem);
+  }
+}
+
+.maincontainer .contact .getintch .form-group input:first-child {
+  margin-right: 2.5rem;
+}
+
+.maincontainer .contact .getintch input[type=number]::-webkit-inner-spin-button,
+.maincontainer .contact .getintch input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.maincontainer footer {
+  background: #061337;
+  text-align: center;
+}
+
+.maincontainer footer span {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+
+.maincontainer footer span a {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
 }
 
 @-webkit-keyframes animate {
