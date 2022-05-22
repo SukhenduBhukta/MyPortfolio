@@ -284,7 +284,7 @@
     }
   }
   .skill {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: rgb(6, 19, 55);
     display: flex;
@@ -306,6 +306,43 @@
       height: 1px;
       width: 80rem;
       background: rgba(255, 255, 255, 0.3);
+    }
+    .cardcontainer{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: space-evenly;
+      .card{
+        position: absolute;
+        height: 33rem;
+        width: 25rem;
+        border-radius: 0rem;
+        background: rgba(0, 213, 255, 0.15);
+        transform-style: preserve-3d;
+        .name{
+          position: absolute;
+          top: 2rem;
+          left: 0;
+          font-size: 3rem;
+          text-align: center;
+          color: #fff;
+          width: 100%;
+          transform: translate3d(0,0,50px);
+          transition: .5s;
+          opacity: 1;
+          z-index: 10;
+          transform-style: preserve-3d;
+        }
+        .skl{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          max-width: 20rem;
+          transition: .5s;
+          z-index: 11;
+          transform-style: preserve-3d;
+          transform: translate3d(-50%,-50%,60px);
+        }
+      }
     }
   }
   .contact {

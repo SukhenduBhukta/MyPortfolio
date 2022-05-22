@@ -364,7 +364,7 @@
 }
 
 .maincontainer .skill {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: #061337;
   display: -webkit-box;
@@ -397,6 +397,58 @@
   height: 1px;
   width: 80rem;
   background: rgba(255, 255, 255, 0.3);
+}
+
+.maincontainer .skill .cardcontainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.maincontainer .skill .cardcontainer .card {
+  position: absolute;
+  height: 33rem;
+  width: 25rem;
+  border-radius: 0rem;
+  background: rgba(0, 213, 255, 0.15);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.maincontainer .skill .cardcontainer .card .name {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  -webkit-transform: translate3d(0, 0, 50px);
+          transform: translate3d(0, 0, 50px);
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 1;
+  z-index: 10;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.maincontainer .skill .cardcontainer .card .skl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 20rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 11;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 60px);
+          transform: translate3d(-50%, -50%, 60px);
 }
 
 .maincontainer .contact {
