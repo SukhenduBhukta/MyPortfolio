@@ -1,17 +1,71 @@
 .maincontainer .head {
   position: fixed;
-  height: 5rem;
+  height: 6rem;
   width: 100%;
-  background: transparent;
   z-index: 100;
-}
-
-.maincontainer .head header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-pack: justify;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  box-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
-  background: #061337;
+  top: 0px;
+  z-index: 11;
+  padding: 0px 50px;
+  width: 100%;
+  background-color: rgba(10, 25, 47, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-filter: none !important;
+          filter: none !important;
+  pointer-events: auto !important;
+  -webkit-user-select: auto !important;
+     -moz-user-select: auto !important;
+      -ms-user-select: auto !important;
+          user-select: auto !important;
 }
 
-.maincontainer .head header h2 {
+.maincontainer .head .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-pack: justify;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  box-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+}
+
+.maincontainer .head .navbar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-pack: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  box-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.maincontainer .head .navbar .logo h2 {
   font-size: 3rem;
   color: #fff;
   position: fixed;
@@ -19,52 +73,71 @@
   top: 0.5rem;
 }
 
-.maincontainer .head header h2 span {
+.maincontainer .head .navbar .logo h2 span {
   color: #64ffda;
   -webkit-animation: animate2 5s ease-in-out infinite;
           animation: animate2 5s ease-in-out infinite;
 }
 
-.maincontainer .head header nav {
-  right: 0;
-  top: 1rem;
-  height: 5rem;
-  width: 35%;
-  display: inline;
-  background: transparent;
-  position: fixed;
-  z-index: 100;
+.maincontainer .head .navbar .point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.maincontainer .head header nav li {
+.maincontainer .head .navbar .point ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-pack: justify;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  box-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.maincontainer .head .navbar .point ol li {
   list-style: none;
   display: inline;
   padding-right: 4rem;
   right: 10rem;
 }
 
-.maincontainer .head header nav li a {
+.maincontainer .head .navbar .point ol li a {
   font-size: 2rem;
   font-weight: 500;
   color: #eee;
 }
 
-.maincontainer .head header nav li a:hover {
+.maincontainer .head .navbar .point ol li a:hover {
   border-bottom: 2px solid #64ffda;
   color: #d0ff00;
 }
 
-.maincontainer .head header nav a button {
-  position: absolute;
-  right: .1rem;
-  padding: 0.5rem 2rem;
+.maincontainer .head .navbar .resume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  right: 0.1rem;
+  height: 4rem;
+  width: 11rem;
   border: none;
   border: 1px solid #64ffda;
-  font-size: 2rem;
-  color: #fff;
-  font-weight: 450;
-  margin: 0 3rem;
-  margin-left: 5rem;
   cursor: pointer;
   border-radius: 0.5rem;
   background: transparent;
@@ -72,7 +145,13 @@
           animation: animate2 5s ease-in-out infinite;
 }
 
-.maincontainer .head header nav a button:hover {
+.maincontainer .head .navbar .resume a {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 450;
+}
+
+.maincontainer .head .navbar .resume:hover {
   background: rgba(255, 255, 255, 0.2);
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
@@ -111,7 +190,7 @@
 
 .maincontainer .home .icon .social {
   position: relative;
-  top: 9rem;
+  top: 14rem;
   display: inline;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -121,21 +200,38 @@
           justify-content: center;
 }
 
-.maincontainer .home .icon .social .social::after {
-  content: "";
-}
-
-.maincontainer .home .icon .social li {
+.maincontainer .home .icon .social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   list-style: none;
-  padding-bottom: 3.4rem;
+  box-align: center;
+  margin: 0;
+  bottom: 0rem;
+  padding: 0;
 }
 
-.maincontainer .home .icon .social li a i {
+.maincontainer .home .icon .social ul li {
+  display: list-item;
+  padding: 1.5rem;
+}
+
+.maincontainer .home .icon .social ul li a i {
   font-size: 2.5rem;
   color: rgba(255, 255, 255, 0.5);
 }
 
-.maincontainer .home .icon .social li a i:hover {
+.maincontainer .home .icon .social ul li a i:hover {
   color: #64ffda;
   font-size: 2.5rem;
   -webkit-transform: translateY(-0.5rem) translateZ(5rem);
@@ -146,12 +242,17 @@
           box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.19);
 }
 
-.maincontainer .home .icon .line {
-  position: absolute;
-  bottom: 0rem;
-  height: 11rem;
+.maincontainer .home .icon .social ul li:last-child {
+  padding-bottom: 3rem;
+}
+
+.maincontainer .home .icon .social ul::after {
+  content: "";
+  display: block;
   width: 1px;
+  height: 10rem;
   background: rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
 }
 
 .maincontainer .home .details {
@@ -227,6 +328,7 @@
 .maincontainer .home .mail {
   position: fixed;
   right: 0;
+  top: 12rem;
   width: 10%;
   height: 100%;
   display: -webkit-box;
@@ -235,18 +337,27 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  box-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .maincontainer .home .mail a {
-  position: absolute;
-  bottom: 26rem;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  position: relative;
+  text-decoration-skip-ink: auto;
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   font-size: 1.6rem;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.4);
 }
 
@@ -254,12 +365,13 @@
   color: #64ffda;
 }
 
-.maincontainer .home .mail .line {
-  position: absolute;
-  bottom: 0rem;
-  height: 11rem;
+.maincontainer .home .mail::after {
+  content: "";
+  display: block;
   width: 1px;
+  height: 10rem;
   background: rgba(255, 255, 255, 0.5);
+  margin: 0 auto;
 }
 
 .maincontainer .about {
@@ -279,7 +391,7 @@
 
 .maincontainer .about h4 {
   position: absolute;
-  left: 35rem;
+  left: 22%;
   -webkit-transform: translateY(-15rem);
           transform: translateY(-15rem);
   font-size: 3rem;
@@ -356,8 +468,8 @@
   -webkit-filter: grayscale(100%) brightness(65%) sepia(100%) hue-rotate(-235deg) saturate(700%) contrast(1);
           filter: grayscale(100%) brightness(65%) sepia(100%) hue-rotate(-235deg) saturate(700%) contrast(1);
   z-index: 1;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .maincontainer .about .detail .pic img {
@@ -365,7 +477,7 @@
 }
 
 .maincontainer .about .detail .pic::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   left: 2rem;
@@ -375,8 +487,8 @@
   width: 100%;
   border: 2px solid #64ffda;
   z-index: -1;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .maincontainer .about .detail .pic:hover {
@@ -406,7 +518,7 @@
 
 .maincontainer .skill h4 {
   position: absolute;
-  left: 35rem;
+  left: 22%;
   letter-spacing: 2px;
   -webkit-transform: translateY(-32rem);
           transform: translateY(-32rem);
@@ -457,8 +569,8 @@
   width: 100%;
   -webkit-transform: translate3d(0, 0, 50px);
           transform: translate3d(0, 0, 50px);
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   opacity: 1;
   z-index: 10;
   -webkit-transform-style: preserve-3d;
@@ -470,8 +582,8 @@
   top: 50%;
   left: 50%;
   max-width: 20rem;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   z-index: 11;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -496,7 +608,7 @@
 
 .maincontainer .contact h4 {
   position: absolute;
-  left: 35rem;
+  left: 22%;
   letter-spacing: 2px;
   -webkit-transform: translateY(-25rem);
           transform: translateY(-25rem);
@@ -652,7 +764,7 @@
   background: linear-gradient(45deg, #dff304, #00ffbf);
   -webkit-box-shadow: inset 4px 4px 6px rgba(255, 255, 255, 0.9), inset -4px -4px 6px rgba(0, 0, 0, 0.7);
           box-shadow: inset 4px 4px 6px rgba(255, 255, 255, 0.9), inset -4px -4px 6px rgba(0, 0, 0, 0.7);
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   padding-left: 0.9em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -733,8 +845,8 @@
   margin-right: 2.5rem;
 }
 
-.maincontainer .contact .getintch input[type=number]::-webkit-inner-spin-button,
-.maincontainer .contact .getintch input[type=number]::-webkit-outer-spin-button {
+.maincontainer .contact .getintch input[type="number"]::-webkit-inner-spin-button,
+.maincontainer .contact .getintch input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -758,6 +870,86 @@
 .maincontainer footer span a {
   color: rgba(255, 255, 255, 0.5);
   font-weight: 400;
+}
+
+@media only screen and (max-width: 1080px) {
+  .maincontainer .home .details h4 {
+    left: 15%;
+  }
+  .maincontainer .home .details h2 {
+    left: 15%;
+    font-size: 6rem;
+  }
+  .maincontainer .home .details h3 {
+    left: 15%;
+    font-size: 6rem;
+  }
+  .maincontainer .home .details .para {
+    left: 15%;
+  }
+  .maincontainer .about h4 {
+    left: 15%;
+    font-size: 2.8rem;
+    -webkit-transform: translateY(-20rem);
+            transform: translateY(-20rem);
+  }
+  .maincontainer .about h4::after {
+    width: 25rem;
+  }
+  .maincontainer .about .detail {
+    left: 15%;
+  }
+  .maincontainer .about .detail .abt {
+    height: 30rem;
+    width: 40rem;
+  }
+  .maincontainer .about .detail .pic {
+    height: 25rem;
+    width: 25rem;
+    margin-top: 0rem;
+  }
+  .maincontainer .skill h4 {
+    left: 15%;
+    font-size: 2.8rem;
+  }
+  .maincontainer .skill h4::after {
+    width: 60rem;
+  }
+  .maincontainer .skill .cardcontainer .card {
+    height: 27rem;
+    width: 22rem;
+  }
+  .maincontainer .skill .cardcontainer .card .name {
+    font-size: 2.8rem;
+  }
+  .maincontainer .contact {
+    display: block;
+  }
+  .maincontainer .contact h4 {
+    left: 15%;
+    -webkit-transform: translateY(8rem);
+            transform: translateY(8rem);
+    font-size: 2.8rem;
+  }
+  .maincontainer .contact h4::after {
+    width: 60rem;
+  }
+  .maincontainer .contact .word {
+    width: 100%;
+  }
+  .maincontainer .contact .word p {
+    padding: 15rem 15rem 5rem 25rem;
+    font-size: 2.2rem;
+  }
+  .maincontainer .contact .word p span {
+    font-size: 5rem;
+  }
+  .maincontainer .contact .getintch {
+    width: 100%;
+  }
+  .maincontainer .contact .getintch .wrapper {
+    padding-bottom: 5rem;
+  }
 }
 
 @-webkit-keyframes animate {
