@@ -20,9 +20,9 @@
 }
 
 .maincontainer .head header h2 span {
-  color: #00ffae;
-  -webkit-animation: animate2 10s ease-in-out infinite;
-          animation: animate2 10s ease-in-out infinite;
+  color: #64ffda;
+  -webkit-animation: animate2 5s ease-in-out infinite;
+          animation: animate2 5s ease-in-out infinite;
 }
 
 .maincontainer .head header nav {
@@ -50,7 +50,7 @@
 }
 
 .maincontainer .head header nav li a:hover {
-  border-bottom: 2px solid #00ffae;
+  border-bottom: 2px solid #64ffda;
   color: #d0ff00;
 }
 
@@ -59,7 +59,7 @@
   right: .1rem;
   padding: 0.5rem 2rem;
   border: none;
-  border: 1px solid #00ffae;
+  border: 1px solid #64ffda;
   font-size: 2rem;
   color: #fff;
   font-weight: 450;
@@ -136,13 +136,14 @@
 }
 
 .maincontainer .home .icon .social li a i:hover {
-  color: #00ffae;
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
+  color: #64ffda;
+  font-size: 2.5rem;
+  -webkit-transform: translateY(-0.5rem) translateZ(5rem);
+          transform: translateY(-0.5rem) translateZ(5rem);
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
-  -webkit-box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.15);
-          box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.19);
+          box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.19);
 }
 
 .maincontainer .home .icon .line {
@@ -164,7 +165,7 @@
   left: 23%;
   font-size: 2rem;
   font-weight: 400;
-  color: #00ffae;
+  color: #64ffda;
 }
 
 .maincontainer .home .details h2 {
@@ -199,20 +200,28 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
-.maincontainer .home .details .para p span {
-  color: #00ffae;
+.maincontainer .home .details .para p a {
+  color: #64ffda;
 }
 
-.maincontainer .home .details .para p span:hover::before {
+.maincontainer .home .details .para p a::after {
   content: "";
-  position: absolute;
+  position: relative;
+  display: block;
   top: 6.7rem;
   left: 22rem;
   height: 1px;
   width: 0rem;
-  background: #00ffae;
-  -webkit-animation: animate 2s ease;
-          animation: animate 2s ease;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.maincontainer .home .details .para p a:hover::after {
+  width: 10rem;
 }
 
 .maincontainer .home .mail {
@@ -242,7 +251,7 @@
 }
 
 .maincontainer .home .mail :hover {
-  color: #00ffae;
+  color: #64ffda;
 }
 
 .maincontainer .home .mail .line {
@@ -316,7 +325,7 @@
 }
 
 .maincontainer .about .detail .abt p span {
-  color: #00ffae;
+  color: #64ffda;
 }
 
 .maincontainer .about .detail .abt table {
@@ -334,33 +343,50 @@
 .maincontainer .about .detail .abt table tr td i {
   font-size: 1rem;
   padding-right: 0.5rem;
-  color: #00ffae;
+  color: #64ffda;
 }
 
 .maincontainer .about .detail .pic {
   margin-top: 11rem;
-  height: 30rem;
-  width: 30rem;
-  border: 1px solid #00ffae;
-  border-radius: 0.5rem;
-}
-
-.maincontainer .about .detail .pic .ima {
   position: relative;
   height: 30rem;
   width: 30rem;
   border-radius: 0.5rem;
-  background: #bbbbbb;
-  overflow: hidden;
   cursor: pointer;
-  -webkit-filter: sepia(1);
-          filter: sepia(1);
+  -webkit-filter: grayscale(100%) brightness(65%) sepia(100%) hue-rotate(-235deg) saturate(700%) contrast(1);
+          filter: grayscale(100%) brightness(65%) sepia(100%) hue-rotate(-235deg) saturate(700%) contrast(1);
   z-index: 1;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-.maincontainer .about .detail .pic .ima:hover {
+.maincontainer .about .detail .pic img {
+  border-radius: 0.5rem;
+}
+
+.maincontainer .about .detail .pic::after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 2rem;
+  border-radius: 0.5rem;
+  top: 2rem;
+  height: 100%;
+  width: 100%;
+  border: 2px solid #64ffda;
+  z-index: -1;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.maincontainer .about .detail .pic:hover {
   -webkit-filter: sepia(0);
           filter: sepia(0);
+}
+
+.maincontainer .about .detail .pic:hover::after {
+  left: 1rem;
+  top: 1rem;
 }
 
 .maincontainer .skill {
@@ -472,8 +498,8 @@
   position: absolute;
   left: 35rem;
   letter-spacing: 2px;
-  -webkit-transform: translateY(-28rem);
-          transform: translateY(-28rem);
+  -webkit-transform: translateY(-25rem);
+          transform: translateY(-25rem);
   font-size: 3rem;
   color: #fff;
 }
@@ -565,7 +591,7 @@
 
 .maincontainer .contact .getintch .wrapper .inner form .form-group .form-control {
   border: none;
-  border-bottom: 1px solid #e71de7;
+  border-bottom: 1px solid #64ffda;
   display: block;
   width: 100%;
   height: 30px;
@@ -598,7 +624,7 @@
 
 .maincontainer .contact .getintch .wrapper .inner form .form-wrapper .form-control {
   border: none;
-  border-bottom: 1px solid #e71de7;
+  border-bottom: 1px solid #64ffda;
   display: block;
   width: 100%;
   height: 30px;
@@ -716,12 +742,17 @@
 .maincontainer footer {
   background: #061337;
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 .maincontainer footer span {
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 400;
+}
+
+.maincontainer footer span i {
+  font-size: 1.2rem;
 }
 
 .maincontainer footer span a {

@@ -15,7 +15,7 @@
         left: 2rem;
         top: 0.5rem;
         span {
-          color: #00ffae;
+          color: #64ffda;
           animation: animate2 5s ease-in-out infinite;
         }
       }
@@ -39,7 +39,7 @@
             color: #eee;
           }
           a:hover {
-            border-bottom: 2px solid #00ffae;
+            border-bottom: 2px solid #64ffda;
             color: #d0ff00;
           }
         }
@@ -50,7 +50,7 @@
               right: .1rem;
               padding: 0.5rem 2rem;
               border: none;
-              border: 1px solid #00ffae;
+              border: 1px solid #64ffda;
               font-size: 2rem;
               color: #fff;
               font-weight: 450;
@@ -103,10 +103,11 @@
               color: rgba(255, 255, 255, 0.5);
             }
             i:hover {
-              color: #00ffae;
-              transform: translateY(-0.5rem);
+              color: #64ffda;
+              font-size: 2.5rem;
+              transform: translateY(-0.5rem) translateZ(5rem);
               transition-duration: 0.5s;
-              box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.15);
+              box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.19);
             }
           }
         }
@@ -128,7 +129,7 @@
         left: 23%;
         font-size: 2rem;
         font-weight: 400;
-        color: #00ffae;
+        color: #64ffda;
       }
       h2 {
         position: absolute;
@@ -156,18 +157,25 @@
           font-size: 1.7rem;
           font-weight: 400;
           color: rgba(255, 255, 255, 0.4);
-          span {
-            color: #00ffae;
+          a {
+            color: #64ffda;
+            
           }
-          span:hover::before {
+          a::after {
             content: "";
-            position: absolute;
+            position: relative;
+            display: block;
             top: 6.7rem;
             left: 22rem;
             height: 1px;
             width: 0rem;
-            background: #00ffae;
-            animation: animate 2s ease;
+            transition: width 2s;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+            //animation: animate 1s ease;
+          }
+          a:hover::after{
+            width: 10rem;
           }
         }
       }
@@ -189,7 +197,7 @@
         color: rgba(255, 255, 255, 0.4);
       }
       :hover {
-        color: #00ffae;
+        color: #64ffda;
       }
       .line {
         position: absolute;
@@ -239,7 +247,7 @@
           padding-bottom: 2rem;
           color: rgba(255, 255, 255, 0.4);
           span {
-            color: #00ffae;
+            color: #64ffda;
           }
         }
         table {
@@ -254,7 +262,7 @@
               i {
                 font-size: 1rem;
                 padding-right: 0.5rem;
-                color: #00ffae;
+                color: #64ffda;
               }
             }
           }
@@ -262,25 +270,38 @@
       }
       .pic {
         margin-top: 11rem;
-        height: 30rem;
-        width: 30rem;
-        border: 1px solid #00ffae;
-        border-radius: 0.5rem;
-        .ima {
           position: relative;
           height: 30rem;
           width: 30rem;
           border-radius: 0.5rem;
-          background: #bbbbbb;
-          overflow: hidden;
           cursor: pointer;
-          filter: sepia(1);
+          filter: grayscale(100%) brightness(65%) sepia(100%) hue-rotate(-235deg) saturate(700%) contrast(1);
           z-index: 1;
+          transition: .5s;
+          img{
+            border-radius: 0.5rem;
+          }
         }
-        .ima:hover {
-          filter: sepia(0);
+        .pic::after{
+          content: '';
+          position: absolute;
+          display: block;
+          left: 2rem;
+          border-radius: 0.5rem;
+          top: 2rem;
+          height: 100%;
+          width: 100%;
+          border: 2px solid #64ffda;
+          z-index: -1;
+          transition: .5s;
         }
-      }
+        .pic:hover {
+          filter:sepia(0);
+        }
+        .pic:hover::after{
+          left: 1rem;
+          top: 1rem;
+        }
     }
   }
   .skill {
@@ -358,7 +379,7 @@
       position: absolute;
       left: 35rem;
       letter-spacing: 2px;
-      transform: translateY(-28rem);
+      transform: translateY(-25rem);
       font-size: 3rem;
       color: #fff;
     }
@@ -420,7 +441,7 @@
               }
               .form-control {
                 border: none;
-                border-bottom: 1px solid #e71de7;
+                border-bottom: 1px solid #64ffda;
                 display: block;
                 width: 100%;
                 height: 30px;
@@ -449,7 +470,7 @@
               }
               .form-control {
                 border: none;
-                border-bottom: 1px solid #e71de7;
+                border-bottom: 1px solid #64ffda;
                 display: block;
                 width: 100%;
                 height: 30px;
@@ -537,10 +558,14 @@
   footer{
     background: rgb(6, 19, 55);
     text-align: center;
+    padding-bottom: 1rem;
     span{
       font-size: 1.4rem;
       color: rgba(255, 255, 255, 0.5);
       font-weight: 400;
+      i{
+        font-size: 1.2rem;
+      }
       a{
         color: rgba(255, 255, 255, 0.5);
       font-weight: 400;
