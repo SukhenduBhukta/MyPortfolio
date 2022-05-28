@@ -1668,6 +1668,7 @@
   }
   .maincontainer .head .navbar .point .hamburger {
     display: block;
+    float: right;
   }
   .maincontainer .head .navbar .point .hamburger .bar {
     width: 2rem;
@@ -1717,7 +1718,7 @@
     left: 10%;
     top: 21rem;
     right: 10%;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   .maincontainer .home .details h2 {
     left: 10%;
@@ -1738,7 +1739,7 @@
     width: 25rem;
   }
   .maincontainer .home .details .para p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .maincontainer .home .mail {
     display: none;
