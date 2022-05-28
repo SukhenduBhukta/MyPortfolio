@@ -75,8 +75,8 @@
 
 .maincontainer .head .navbar .logo h2 span {
   color: #64ffda;
-  -webkit-animation: animate2 5s ease-in-out infinite;
-          animation: animate2 5s ease-in-out infinite;
+  -webkit-animation: animate2 2s ease-in-out infinite;
+          animation: animate2 2s ease-in-out infinite;
 }
 
 .maincontainer .head .navbar .point {
@@ -88,7 +88,7 @@
           align-items: center;
 }
 
-.maincontainer .head .navbar .point ol {
+.maincontainer .head .navbar .point ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,25 +105,25 @@
   list-style: none;
 }
 
-.maincontainer .head .navbar .point ol li {
+.maincontainer .head .navbar .point ul li {
   list-style: none;
   display: inline;
   padding-right: 4rem;
-  right: 10rem;
+  right: 0rem;
 }
 
-.maincontainer .head .navbar .point ol li a {
+.maincontainer .head .navbar .point ul li a {
   font-size: 2rem;
   font-weight: 500;
   color: #eee;
 }
 
-.maincontainer .head .navbar .point ol li a:hover {
+.maincontainer .head .navbar .point ul li a:hover {
   border-bottom: 2px solid #64ffda;
   color: #d0ff00;
 }
 
-.maincontainer .head .navbar .resume {
+.maincontainer .head .navbar .point ul li .resume {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,20 +141,47 @@
   cursor: pointer;
   border-radius: 0.5rem;
   background: transparent;
-  -webkit-animation: animate2 5s ease-in-out infinite;
-          animation: animate2 5s ease-in-out infinite;
+  -webkit-animation: animate2 2s ease-in-out infinite;
+          animation: animate2 2s ease-in-out infinite;
 }
 
-.maincontainer .head .navbar .resume a {
+.maincontainer .head .navbar .point ul li .resume a {
   font-size: 2rem;
   color: #fff;
   font-weight: 450;
 }
 
-.maincontainer .head .navbar .resume:hover {
+.maincontainer .head .navbar .point ul li .resume:hover {
   background: rgba(255, 255, 255, 0.2);
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
+}
+
+.maincontainer .head .navbar .point ul .navList:last-child {
+  padding-right: 0;
+}
+
+.maincontainer .head .navbar .point .hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.maincontainer .head .navbar .point .hamburger .bar {
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  background: #fff;
+  margin: 5px auto;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.maincontainer .head .navbar .point .hamburger .bar:nth-child(2) {
+  width: 3.5rem;
+  -webkit-box-shadow: 0 0 1rem #00ffa6, 0 0 2rem #00ffa6, 0 0 3rem #00ffa6, 0 0 4rem #00ffa6, 0 0 5rem #00ffa6;
+          box-shadow: 0 0 1rem #00ffa6, 0 0 2rem #00ffa6, 0 0 3rem #00ffa6, 0 0 4rem #00ffa6, 0 0 5rem #00ffa6;
+  -webkit-animation: animate2 2s ease-in-out infinite;
+          animation: animate2 2s ease-in-out infinite;
 }
 
 .maincontainer .home {
@@ -890,7 +917,6 @@
 
 .maincontainer .contact .social2 ul li a i:hover {
   color: #64ffda;
-  font-size: 2.5rem;
   -webkit-transform: translateY(-0.5rem) translateZ(5rem);
           transform: translateY(-0.5rem) translateZ(5rem);
   -webkit-transition-duration: 0.5s;
@@ -1112,6 +1138,40 @@
 }
 
 @media only screen and (max-width: 720px) {
+  .maincontainer .head .navbar .point .hamburger {
+    display: block;
+  }
+  .maincontainer .head .navbar .point .hamburger.active .bar:nth-child(2) {
+    width: 0;
+  }
+  .maincontainer .head .navbar .point .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .maincontainer .head .navbar .point .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
+  .maincontainer .head .navbar .point ul {
+    position: fixed;
+    left: -100%;
+    top: 6rem;
+    gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .maincontainer .head .navbar .point ul li {
+    margin: 1.6rem 0;
+  }
+  .maincontainer .head .navbar .point .navMenu.active {
+    left: 0;
+  }
   .maincontainer .home .icon {
     width: 0;
     display: none;
@@ -1242,6 +1302,550 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .maincontainer .head .navbar .logo h2 {
+    top: 1rem;
+    font-size: 2.5rem;
+  }
+  .maincontainer .head .navbar .point .hamburger {
+    display: block;
+  }
+  .maincontainer .head .navbar .point .hamburger.active .bar:nth-child(2) {
+    width: 0;
+  }
+  .maincontainer .head .navbar .point .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .maincontainer .head .navbar .point .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
+  .maincontainer .head .navbar .point ul {
+    position: fixed;
+    left: -100%;
+    top: 6rem;
+    gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .maincontainer .head .navbar .point ul li {
+    margin: 1.6rem 0;
+  }
+  .maincontainer .head .navbar .point .navMenu.active {
+    left: 0;
+  }
+  .maincontainer .home .icon {
+    width: 0;
+    display: none;
+  }
+  .maincontainer .home .details {
+    width: 100%;
+  }
+  .maincontainer .home .details h4 {
+    left: 10%;
+    top: 23rem;
+    right: 10%;
+    font-size: 1.6rem;
+  }
+  .maincontainer .home .details h2 {
+    left: 10%;
+    right: 10%;
+    top: 25rem;
+    font-size: 4rem;
+  }
+  .maincontainer .home .details h3 {
+    top: 31rem;
+    left: 10%;
+    right: 10%;
+    font-size: 3.5rem;
+  }
+  .maincontainer .home .details .para {
+    left: 10%;
+    right: 10%;
+    top: 38rem;
+    width: 30rem;
+  }
+  .maincontainer .home .details .para p {
+    font-size: 1.5rem;
+  }
+  .maincontainer .home .mail {
+    display: none;
+    width: 0;
+  }
+  .maincontainer .about {
+    padding-top: 10rem;
+    min-height: 115vh;
+  }
+  .maincontainer .about h4 {
+    left: 10%;
+    right: 10%;
+    font-size: 2.4rem;
+    -webkit-transform: translateY(-33rem);
+            transform: translateY(-33rem);
+  }
+  .maincontainer .about h4::after {
+    width: 27rem;
+  }
+  .maincontainer .about .detail {
+    left: 10%;
+    right: 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 5rem;
+  }
+  .maincontainer .about .detail .abt {
+    left: 10%;
+    height: 30rem;
+    width: 40rem;
+  }
+  .maincontainer .about .detail .abt p {
+    font-size: 1.5rem;
+  }
+  .maincontainer .about .detail .pic {
+    height: 22rem;
+    width: 22rem;
+    margin: 4rem;
+  }
+  .maincontainer .skill h4 {
+    left: 10%;
+    right: 10%;
+    font-size: 2.4rem;
+    -webkit-transform: translateY(-45rem);
+            transform: translateY(-45rem);
+  }
+  .maincontainer .skill h4::after {
+    width: 35rem;
+  }
+  .maincontainer .skill .cardcontainer {
+    margin-top: 15rem;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .maincontainer .skill .cardcontainer .card {
+    height: 24rem;
+    width: 19rem;
+  }
+  .maincontainer .skill .cardcontainer .card .name {
+    font-size: 2.5rem;
+  }
+  .maincontainer .contact {
+    display: block;
+  }
+  .maincontainer .contact h4 {
+    left: 10%;
+    right: 10%;
+    -webkit-transform: translateY(8rem);
+            transform: translateY(8rem);
+    font-size: 2.4rem;
+  }
+  .maincontainer .contact h4::after {
+    width: 30rem;
+  }
+  .maincontainer .contact .word {
+    width: 100%;
+  }
+  .maincontainer .contact .word p {
+    padding: 15rem 5rem 5rem 7rem;
+    font-size: 1.6rem;
+  }
+  .maincontainer .contact .word p span {
+    font-size: 3.5rem;
+  }
+  .maincontainer .contact .getintch {
+    width: 100%;
+  }
+  .maincontainer .contact .getintch .wrapper {
+    padding-bottom: 5rem;
+  }
+  .maincontainer .contact .getintch .wrapper .inner {
+    min-width: 30rem;
+  }
+  .maincontainer .contact .social2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .maincontainer .head .navbar .logo h2 {
+    top: 1rem;
+    font-size: 2.5rem;
+  }
+  .maincontainer .head .navbar .point .hamburger {
+    display: block;
+  }
+  .maincontainer .head .navbar .point .hamburger.active .bar:nth-child(2) {
+    width: 0;
+  }
+  .maincontainer .head .navbar .point .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .maincontainer .head .navbar .point .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
+  .maincontainer .head .navbar .point ul {
+    position: fixed;
+    left: -100%;
+    top: 6rem;
+    gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .maincontainer .head .navbar .point ul li {
+    margin: 1.6rem 0;
+  }
+  .maincontainer .head .navbar .point .navMenu.active {
+    left: 0;
+  }
+  .maincontainer .home .icon {
+    width: 0;
+    display: none;
+  }
+  .maincontainer .home .details {
+    width: 100%;
+  }
+  .maincontainer .home .details h4 {
+    left: 10%;
+    top: 23rem;
+    right: 10%;
+    font-size: 1.5rem;
+  }
+  .maincontainer .home .details h2 {
+    left: 10%;
+    right: 10%;
+    top: 25rem;
+    font-size: 3.5rem;
+  }
+  .maincontainer .home .details h3 {
+    top: 30rem;
+    left: 10%;
+    right: 10%;
+    font-size: 2.8rem;
+  }
+  .maincontainer .home .details .para {
+    left: 10%;
+    right: 10%;
+    top: 35rem;
+    width: 30rem;
+  }
+  .maincontainer .home .details .para p {
+    font-size: 1.5rem;
+  }
+  .maincontainer .home .mail {
+    display: none;
+    width: 0;
+  }
+  .maincontainer .about {
+    padding-top: 10rem;
+    min-height: 120vh;
+  }
+  .maincontainer .about h4 {
+    left: 10%;
+    right: 10%;
+    font-size: 2.3rem;
+    -webkit-transform: translateY(-35rem);
+            transform: translateY(-35rem);
+  }
+  .maincontainer .about h4::after {
+    width: 20rem;
+  }
+  .maincontainer .about .detail {
+    left: 10%;
+    right: 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 3rem;
+  }
+  .maincontainer .about .detail .abt {
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+    height: 30rem;
+    width: 36rem;
+  }
+  .maincontainer .about .detail .abt p {
+    font-size: 1.5rem;
+  }
+  .maincontainer .about .detail .pic {
+    height: 22rem;
+    width: 22rem;
+    margin: 4rem;
+  }
+  .maincontainer .skill h4 {
+    left: 10%;
+    right: 10%;
+    font-size: 2.3rem;
+    -webkit-transform: translateY(-85rem);
+            transform: translateY(-85rem);
+  }
+  .maincontainer .skill h4::after {
+    width: 25rem;
+  }
+  .maincontainer .skill .cardcontainer {
+    margin-top: 15rem;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .maincontainer .skill .cardcontainer .card {
+    height: 24rem;
+    width: 19rem;
+  }
+  .maincontainer .skill .cardcontainer .card .name {
+    font-size: 2.5rem;
+  }
+  .maincontainer .contact {
+    display: block;
+  }
+  .maincontainer .contact h4 {
+    left: 10%;
+    right: 10%;
+    -webkit-transform: translateY(8rem);
+            transform: translateY(8rem);
+    font-size: 2.3rem;
+  }
+  .maincontainer .contact h4::after {
+    width: 23rem;
+  }
+  .maincontainer .contact .word {
+    width: 100%;
+  }
+  .maincontainer .contact .word p {
+    padding: 15rem 2rem 5rem 5rem;
+    font-size: 1.5rem;
+  }
+  .maincontainer .contact .word p span {
+    font-size: 3.2rem;
+  }
+  .maincontainer .contact .getintch {
+    width: 100%;
+  }
+  .maincontainer .contact .getintch .wrapper {
+    padding-bottom: 5rem;
+  }
+  .maincontainer .contact .getintch .wrapper .inner {
+    min-width: 30rem;
+    margin: 0 3rem;
+  }
+  .maincontainer .contact .social2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .maincontainer .head .navbar .logo h2 {
+    top: 1rem;
+    font-size: 2.5rem;
+  }
+  .maincontainer .head .navbar .point .hamburger {
+    display: block;
+  }
+  .maincontainer .head .navbar .point .hamburger .bar {
+    width: 2rem;
+  }
+  .maincontainer .head .navbar .point .hamburger .bar:nth-child(2) {
+    width: 3rem;
+  }
+  .maincontainer .head .navbar .point .hamburger.active .bar:nth-child(2) {
+    width: 0;
+  }
+  .maincontainer .head .navbar .point .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .maincontainer .head .navbar .point .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
+  .maincontainer .head .navbar .point ul {
+    position: fixed;
+    left: -100%;
+    top: 6rem;
+    gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .maincontainer .head .navbar .point ul li {
+    margin: 1.6rem 0;
+  }
+  .maincontainer .head .navbar .point .navMenu.active {
+    left: 0;
+  }
+  .maincontainer .home .icon {
+    width: 0;
+    display: none;
+  }
+  .maincontainer .home .details {
+    width: 100%;
+  }
+  .maincontainer .home .details h4 {
+    left: 10%;
+    top: 21rem;
+    right: 10%;
+    font-size: 1.6rem;
+  }
+  .maincontainer .home .details h2 {
+    left: 10%;
+    right: 10%;
+    top: 23rem;
+    font-size: 3rem;
+  }
+  .maincontainer .home .details h3 {
+    top: 28rem;
+    left: 10%;
+    right: 10%;
+    font-size: 2.8rem;
+  }
+  .maincontainer .home .details .para {
+    left: 10%;
+    right: 10%;
+    top: 37rem;
+    width: 25rem;
+  }
+  .maincontainer .home .details .para p {
+    font-size: 1.5rem;
+  }
+  .maincontainer .home .mail {
+    display: none;
+    width: 0;
+  }
+  .maincontainer .about {
+    padding-top: 8rem;
+    min-height: 130vh;
+  }
+  .maincontainer .about h4 {
+    left: 10%;
+    right: 10%;
+    font-size: 2rem;
+    -webkit-transform: translateY(-35rem);
+            transform: translateY(-35rem);
+  }
+  .maincontainer .about h4::after {
+    width: 15rem;
+  }
+  .maincontainer .about .detail {
+    left: 10%;
+    right: 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 3rem;
+  }
+  .maincontainer .about .detail .abt {
+    margin-left: 5rem;
+    margin-bottom: 5.4rem;
+    height: 30rem;
+    width: 30rem;
+  }
+  .maincontainer .about .detail .abt p {
+    font-size: 1.5rem;
+  }
+  .maincontainer .about .detail .pic {
+    height: 22rem;
+    width: 22rem;
+    margin: 4rem;
+  }
+  .maincontainer .skill h4 {
+    left: 10%;
+    right: 10%;
+    font-size: 2rem;
+    -webkit-transform: translateY(-85rem);
+            transform: translateY(-85rem);
+  }
+  .maincontainer .skill h4::after {
+    width: 20rem;
+  }
+  .maincontainer .skill .cardcontainer {
+    margin-top: 15rem;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .maincontainer .skill .cardcontainer .card {
+    height: 24rem;
+    width: 19rem;
+  }
+  .maincontainer .skill .cardcontainer .card .name {
+    font-size: 2.5rem;
+  }
+  .maincontainer .contact {
+    display: block;
+  }
+  .maincontainer .contact h4 {
+    left: 10%;
+    right: 10%;
+    -webkit-transform: translateY(8rem);
+            transform: translateY(8rem);
+    font-size: 2rem;
+  }
+  .maincontainer .contact h4::after {
+    width: 17rem;
+  }
+  .maincontainer .contact .word {
+    width: 100%;
+  }
+  .maincontainer .contact .word p {
+    padding: 15rem 2rem 5rem 5rem;
+    font-size: 1.5rem;
+  }
+  .maincontainer .contact .word p span {
+    font-size: 3rem;
+  }
+  .maincontainer .contact .getintch {
+    width: 100%;
+  }
+  .maincontainer .contact .getintch .wrapper {
+    padding-bottom: 5rem;
+  }
+  .maincontainer .contact .getintch .wrapper .inner {
+    min-width: 30rem;
+    margin: 0 3rem;
+  }
+  .maincontainer .contact .social2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .maincontainer .contact .social2 ul li {
+    padding: 1rem;
+  }
+  .maincontainer .contact .social2 ul li a i {
+    font-size: 2rem;
   }
 }
 
