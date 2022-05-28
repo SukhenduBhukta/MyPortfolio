@@ -851,6 +851,54 @@
   margin: 0;
 }
 
+.maincontainer .contact .social2 {
+  position: relative;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.maincontainer .contact .social2 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  box-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.maincontainer .contact .social2 ul li {
+  padding: 1.5rem;
+}
+
+.maincontainer .contact .social2 ul li a i {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.maincontainer .contact .social2 ul li a i:hover {
+  color: #64ffda;
+  font-size: 2.5rem;
+  -webkit-transform: translateY(-0.5rem) translateZ(5rem);
+          transform: translateY(-0.5rem) translateZ(5rem);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.19);
+          box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.19);
+}
+
 .maincontainer footer {
   background: #061337;
   text-align: center;
@@ -911,9 +959,14 @@
   .maincontainer .skill h4 {
     left: 15%;
     font-size: 2.8rem;
+    -webkit-transform: translateY(-30rem);
+            transform: translateY(-30rem);
   }
   .maincontainer .skill h4::after {
     width: 60rem;
+  }
+  .maincontainer .skill .cardcontainer {
+    margin-top: 15rem;
   }
   .maincontainer .skill .cardcontainer .card {
     height: 27rem;
@@ -932,7 +985,7 @@
     font-size: 2.8rem;
   }
   .maincontainer .contact h4::after {
-    width: 60rem;
+    width: 55rem;
   }
   .maincontainer .contact .word {
     width: 100%;
@@ -949,6 +1002,246 @@
   }
   .maincontainer .contact .getintch .wrapper {
     padding-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .maincontainer .home .details h4 {
+    left: 13%;
+    font-size: 1.9rem;
+  }
+  .maincontainer .home .details h2 {
+    left: 13%;
+    font-size: 5rem;
+  }
+  .maincontainer .home .details h3 {
+    left: 13%;
+    font-size: 5rem;
+  }
+  .maincontainer .home .details .para {
+    left: 13%;
+    height: 15rem;
+  }
+  .maincontainer .home .details .para p {
+    font-size: 1.6rem;
+  }
+  .maincontainer .about {
+    padding-top: 10rem;
+    min-height: 115vh;
+  }
+  .maincontainer .about h4 {
+    left: 13%;
+    font-size: 2.7rem;
+    -webkit-transform: translateY(-33rem);
+            transform: translateY(-33rem);
+  }
+  .maincontainer .about h4::after {
+    width: 40rem;
+  }
+  .maincontainer .about .detail {
+    left: 13%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 5rem;
+  }
+  .maincontainer .about .detail .abt {
+    height: 30rem;
+    width: 55rem;
+  }
+  .maincontainer .about .detail .abt p {
+    font-size: 1.6rem;
+  }
+  .maincontainer .about .detail .pic {
+    height: 25rem;
+    width: 25rem;
+    margin: 4rem;
+  }
+  .maincontainer .skill h4 {
+    left: 13%;
+    font-size: 2.7rem;
+    -webkit-transform: translateY(-45rem);
+            transform: translateY(-45rem);
+  }
+  .maincontainer .skill h4::after {
+    width: 50rem;
+  }
+  .maincontainer .skill .cardcontainer {
+    margin-top: 15rem;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .maincontainer .skill .cardcontainer .card {
+    height: 26rem;
+    width: 21rem;
+  }
+  .maincontainer .skill .cardcontainer .card .name {
+    font-size: 2.6rem;
+  }
+  .maincontainer .contact {
+    display: block;
+  }
+  .maincontainer .contact h4 {
+    left: 13%;
+    -webkit-transform: translateY(8rem);
+            transform: translateY(8rem);
+    font-size: 2.7rem;
+  }
+  .maincontainer .contact h4::after {
+    width: 45rem;
+  }
+  .maincontainer .contact .word {
+    width: 100%;
+  }
+  .maincontainer .contact .word p {
+    padding: 15rem 10rem 5rem 15rem;
+    font-size: 1.8rem;
+  }
+  .maincontainer .contact .word p span {
+    font-size: 4.5rem;
+  }
+  .maincontainer .contact .getintch {
+    width: 100%;
+  }
+  .maincontainer .contact .getintch .wrapper {
+    padding-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .maincontainer .home .icon {
+    width: 0;
+    display: none;
+  }
+  .maincontainer .home .details {
+    width: 100%;
+  }
+  .maincontainer .home .details h4 {
+    left: 10%;
+    top: 23rem;
+    right: 10%;
+    font-size: 1.7rem;
+  }
+  .maincontainer .home .details h2 {
+    left: 10%;
+    right: 10%;
+    top: 25rem;
+    font-size: 4.5rem;
+  }
+  .maincontainer .home .details h3 {
+    top: 31rem;
+    left: 10%;
+    right: 10%;
+    font-size: 4.5rem;
+  }
+  .maincontainer .home .details .para {
+    left: 10%;
+    right: 10%;
+    top: 38rem;
+    height: 15rem;
+  }
+  .maincontainer .home .details .para p {
+    font-size: 1.5rem;
+  }
+  .maincontainer .home .mail {
+    display: none;
+    width: 0;
+  }
+  .maincontainer .about {
+    padding-top: 10rem;
+    min-height: 115vh;
+  }
+  .maincontainer .about h4 {
+    left: 10%;
+    right: 10%;
+    font-size: 2.5rem;
+    -webkit-transform: translateY(-33rem);
+            transform: translateY(-33rem);
+  }
+  .maincontainer .about h4::after {
+    width: 35rem;
+  }
+  .maincontainer .about .detail {
+    left: 10%;
+    right: 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 5rem;
+  }
+  .maincontainer .about .detail .abt {
+    height: 30rem;
+    width: 50rem;
+  }
+  .maincontainer .about .detail .abt p {
+    font-size: 1.5rem;
+  }
+  .maincontainer .about .detail .pic {
+    height: 25rem;
+    width: 25rem;
+    margin: 4rem;
+  }
+  .maincontainer .skill h4 {
+    left: 10%;
+    right: 10%;
+    font-size: 2.5rem;
+    -webkit-transform: translateY(-45rem);
+            transform: translateY(-45rem);
+  }
+  .maincontainer .skill h4::after {
+    width: 45rem;
+  }
+  .maincontainer .skill .cardcontainer {
+    margin-top: 15rem;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  .maincontainer .skill .cardcontainer .card {
+    height: 26rem;
+    width: 21rem;
+  }
+  .maincontainer .skill .cardcontainer .card .name {
+    font-size: 2.5rem;
+  }
+  .maincontainer .contact {
+    display: block;
+  }
+  .maincontainer .contact h4 {
+    left: 10%;
+    right: 10%;
+    -webkit-transform: translateY(8rem);
+            transform: translateY(8rem);
+    font-size: 2.5rem;
+  }
+  .maincontainer .contact h4::after {
+    width: 40rem;
+  }
+  .maincontainer .contact .word {
+    width: 100%;
+  }
+  .maincontainer .contact .word p {
+    padding: 15rem 5rem 5rem 10rem;
+    font-size: 1.7rem;
+  }
+  .maincontainer .contact .word p span {
+    font-size: 4rem;
+  }
+  .maincontainer .contact .getintch {
+    width: 100%;
+  }
+  .maincontainer .contact .getintch .wrapper {
+    padding-bottom: 5rem;
+  }
+  .maincontainer .contact .social2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

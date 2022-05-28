@@ -619,6 +619,38 @@
         margin: 0;
       }
     }
+    .social2{
+      position: relative;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2rem;
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          list-style: none;
+          box-align: center;
+          margin: 0;
+          padding: 0;
+          li {
+            padding: 1.5rem;
+            a {
+              i {
+                font-size: 2.5rem;
+                color: rgba(255, 255, 255, 0.5);
+              }
+              i:hover {
+                color: #64ffda;
+                font-size: 2.5rem;
+                transform: translateY(-0.5rem) translateZ(5rem);
+                transition-duration: 0.5s;
+                box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.19);
+              }
+            }
+          }
+        }
+    }
   }
   footer {
     background: rgb(6, 19, 55);
@@ -685,11 +717,13 @@
   h4{
     left: 15%;
     font-size: 2.8rem;
+    transform: translateY(-30rem);
   }
   h4::after{
     width: 60rem;
   }
   .cardcontainer{
+    margin-top: 15rem;
     .card{
       height: 27rem;
         width: 22rem;
@@ -707,7 +741,7 @@
     font-size: 2.8rem;
   }
   h4::after{
-    width: 60rem;
+    width: 55rem;
   }
   .word{
     width: 100%;
@@ -731,9 +765,245 @@
 }
 }
 
+@media only screen and (max-width: 900px){
+  .maincontainer{
+    .home{
+      .details{
+        h4{
+          left: 13%;
+          font-size: 1.9rem;
+        }
+        h2{
+          left: 13%;
+          font-size: 5rem;
+        }
+        h3{
+          left: 13%;
+          font-size: 5rem;
+        }
+        .para{
+          left: 13%;
+          height: 15rem;
+          p{
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+    .about{
+      padding-top: 10rem;
+      min-height: 115vh;
+      h4{
+        left: 13%;
+        font-size: 2.7rem;
+        transform: translateY(-33rem);
+      }
+      h4::after{
+        width: 40rem;
+      }
+      .detail{
+        left: 13%;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-top: 5rem;
+        .abt{
+          height: 30rem;
+          width: 55rem;
+          p{
+            font-size: 1.6rem;
+          }
+        }
+        .pic{
+          height: 25rem;
+          width: 25rem;
+          margin: 4rem;
+        }
+      }
+    }
+  .skill{
+    h4{
+      left: 13%;
+      font-size: 2.7rem;
+      transform: translateY(-45rem);
+    }
+    h4::after{
+      width: 50rem;
+    }
+    .cardcontainer{
+      margin-top: 15rem;
+      grid-template-columns: auto auto;
+      .card{
+        height: 26rem;
+          width: 21rem;
+        .name{
+          font-size: 2.6rem;
+        }
+      }
+    }
+  }
+  .contact{
+    display: block;
+    h4{
+      left: 13%;
+      transform: translateY(8rem);
+      font-size: 2.7rem;
+    }
+    h4::after{
+      width: 45rem;
+    }
+    .word{
+      width: 100%;
+      p{
+  
+        padding: 15rem 10rem 5rem 15rem;
+        font-size: 1.8rem;
+        span{
+          font-size: 4.5rem;
+        }
+      }
+    }
+    .getintch{
+      width: 100%;
+      .wrapper{
+        padding-bottom: 5rem;
+        
+      }
+    }
+  }
+  }
+  }
 
-
-
+  @media only screen and (max-width: 720px){
+    .maincontainer{
+      .home{
+        .icon{
+          width: 0;
+          display: none;
+        }
+        .details{
+          width: 100%;
+          h4{
+            left:10%;
+            top: 23rem;
+            right: 10%;
+            font-size: 1.7rem;
+          }
+          h2{
+            left: 10%;
+            right: 10%;
+            top: 25rem;
+            font-size: 4.5rem;
+          }
+          h3{
+            top: 31rem;
+            left: 10%;
+            right: 10%;
+            font-size: 4.5rem;
+          }
+          .para{
+            left: 10%;
+            right: 10%;
+            top: 38rem;
+            height: 15rem;
+            p{
+              font-size: 1.5rem;
+            }
+          }
+        }
+        .mail{
+          display: none;
+          width: 0;
+        }
+      }
+      .about{
+        padding-top: 10rem;
+        min-height: 115vh;
+        h4{
+          left: 10%;
+          right: 10%;
+          font-size: 2.5rem;
+          transform: translateY(-33rem);
+        }
+        h4::after{
+          width: 35rem;
+        }
+        .detail{
+          left: 10%;
+          right: 10%;
+          flex-direction: column;
+          justify-content: space-around;
+          padding-top: 5rem;
+          .abt{
+            height: 30rem;
+            width: 50rem;
+            p{
+              font-size: 1.5rem;
+            }
+          }
+          .pic{
+            height: 25rem;
+            width: 25rem;
+            margin: 4rem;
+          }
+        }
+      }
+    .skill{
+      h4{
+        left: 10%;
+          right: 10%;
+        font-size: 2.5rem;
+        transform: translateY(-45rem);
+      }
+      h4::after{
+        width: 45rem;
+      }
+      .cardcontainer{
+        margin-top: 15rem;
+        grid-template-columns: auto auto;
+        .card{
+          height: 26rem;
+            width: 21rem;
+          .name{
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+    .contact{
+      display: block;
+      h4{
+        left: 10%;
+          right: 10%;
+        transform: translateY(8rem);
+        font-size: 2.5rem;
+      }
+      h4::after{
+        width: 40rem;
+      }
+      .word{
+        width: 100%;
+        p{
+    
+          padding: 15rem 5rem 5rem 10rem;
+          font-size: 1.7rem;
+          span{
+            font-size: 4rem;
+          }
+        }
+      }
+      .getintch{
+        width: 100%;
+        .wrapper{
+          padding-bottom: 5rem;
+          
+        }
+      }
+      .social2{
+        display: flex;
+      }
+    }
+    }
+    }
 
 
 @keyframes animate {
