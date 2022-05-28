@@ -164,6 +164,7 @@
 .maincontainer .head .navbar .point .hamburger {
   display: none;
   right: 0;
+  float: right;
   cursor: pointer;
 }
 
