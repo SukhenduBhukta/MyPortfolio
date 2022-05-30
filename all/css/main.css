@@ -1835,7 +1835,7 @@
     width: 0;
   }
   .maincontainer .about {
-    padding-top: 8rem;
+    padding-top: 0rem;
     min-height: 130vh;
   }
   .maincontainer .about h4 {
