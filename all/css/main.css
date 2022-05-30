@@ -1835,15 +1835,15 @@
     width: 0;
   }
   .maincontainer .about {
-    padding-top: 0rem;
+    padding-top: 8rem;
     min-height: 130vh;
   }
   .maincontainer .about h4 {
     left: 10%;
     right: 10%;
     font-size: 2rem;
-    -webkit-transform: translateY(-35rem);
-            transform: translateY(-35rem);
+    -webkit-transform: translateY(-38rem);
+            transform: translateY(-38rem);
   }
   .maincontainer .about h4::after {
     width: 15rem;
