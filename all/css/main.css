@@ -69,6 +69,7 @@
   font-size: 3rem;
   color: #fff;
   position: fixed;
+  letter-spacing: 2px;
   left: 2rem;
   top: 0.5rem;
 }
@@ -114,12 +115,49 @@
 
 .maincontainer .head .navbar .point .navMenu li a {
   font-size: 2rem;
+  letter-spacing: 2px;
   font-weight: 500;
   color: #eee;
 }
 
+.maincontainer .head .navbar .point .navMenu li a span {
+  position: relative;
+}
+
+.maincontainer .head .navbar .point .navMenu li a span::after, .maincontainer .head .navbar .point .navMenu li a span::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  background: #64ffda;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.maincontainer .head .navbar .point .navMenu li a span::after {
+  bottom: 0;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.maincontainer .head .navbar .point .navMenu li a span::before {
+  top: 0;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.maincontainer .head .navbar .point .navMenu li a span:hover::before,
+.maincontainer .head .navbar .point .navMenu li a span:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
 .maincontainer .head .navbar .point .navMenu li a:hover {
-  border-bottom: 2px solid #64ffda;
   color: #d0ff00;
 }
 
@@ -331,27 +369,37 @@
 }
 
 .maincontainer .home .details .para p a {
+  position: absolute;
   color: #64ffda;
+  margin-left: 4px;
+  width: 11rem;
+  height: 2.5rem;
 }
 
-.maincontainer .home .details .para p a::after {
-  content: "";
-  position: relative;
-  display: block;
-  top: 6.7rem;
-  left: 22rem;
+.maincontainer .home .details .para p a span::after {
+  content: '';
+  position: absolute;
+  width: 90%;
   height: 1px;
-  width: 0rem;
-  -webkit-transition: width 2s;
-  transition: width 2s;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  left: 0;
+  background: #64ffda;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 
-.maincontainer .home .details .para p a:hover::after {
-  width: 10rem;
+.maincontainer .home .details .para p a span::after {
+  bottom: 0;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.maincontainer .home .details .para p a span:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .maincontainer .home .mail {
@@ -1173,8 +1221,8 @@
             flex-direction: column;
     width: 100%;
     text-align: center;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   .maincontainer .head .navbar .point .navMenu li {
     padding: 3rem 0;
@@ -1194,6 +1242,10 @@
   }
   .maincontainer .head .navbar .point .navMenu li a:hover {
     border: none;
+    color: #fff;
+  }
+  .maincontainer .head .navbar .point .navMenu li:nth-child(odd) {
+    background: rgba(6, 19, 55, 0.5);
   }
   .maincontainer .head .navbar .point .navMenu.active {
     left: 0;
@@ -1231,6 +1283,9 @@
   }
   .maincontainer .home .details .para p {
     font-size: 1.5rem;
+  }
+  .maincontainer .home .details .para p a {
+    width: 10rem;
   }
   .maincontainer .home .mail {
     display: none;
@@ -1369,8 +1424,8 @@
             flex-direction: column;
     width: 100%;
     text-align: center;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   .maincontainer .head .navbar .point .navMenu li {
     padding: 3rem 0;
@@ -1390,6 +1445,10 @@
   }
   .maincontainer .head .navbar .point .navMenu li a:hover {
     border: none;
+    color: #fff;
+  }
+  .maincontainer .head .navbar .point .navMenu li:nth-child(odd) {
+    background: rgba(6, 19, 55, 0.5);
   }
   .maincontainer .head .navbar .point .navMenu.active {
     left: 0;
@@ -1569,8 +1628,8 @@
             flex-direction: column;
     width: 100%;
     text-align: center;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   .maincontainer .head .navbar .point .navMenu li {
     padding: 3rem 0;
@@ -1590,6 +1649,10 @@
   }
   .maincontainer .head .navbar .point .navMenu li a:hover {
     border: none;
+    color: #fff;
+  }
+  .maincontainer .head .navbar .point .navMenu li:nth-child(odd) {
+    background: rgba(6, 19, 55, 0.5);
   }
   .maincontainer .head .navbar .point .navMenu.active {
     left: 0;
@@ -1771,8 +1834,8 @@
             flex-direction: column;
     width: 100%;
     text-align: center;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
   .maincontainer .head .navbar .point .navMenu li {
     padding: 3rem 0;
@@ -1792,6 +1855,10 @@
   }
   .maincontainer .head .navbar .point .navMenu li a:hover {
     border: none;
+    color: #fff;
+  }
+  .maincontainer .head .navbar .point .navMenu li:nth-child(odd) {
+    background: rgba(6, 19, 55, 0.5);
   }
   .maincontainer .head .navbar .point .navMenu.active {
     left: 0;
@@ -1825,10 +1892,13 @@
     left: 10%;
     right: 10%;
     top: 37rem;
-    width: 25rem;
+    width: 28rem;
   }
   .maincontainer .home .details .para p {
     font-size: 1.8rem;
+  }
+  .maincontainer .home .details .para p a {
+    width: 11.5rem;
   }
   .maincontainer .home .mail {
     display: none;
