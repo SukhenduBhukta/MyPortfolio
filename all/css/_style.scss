@@ -44,6 +44,7 @@
           letter-spacing: 2px;
           left: 2rem;
           top: 0.5rem;
+          animation: animate4 2s linear;
           span {
             color: #64ffda;
             animation: animate2 2s ease-in-out infinite;
@@ -62,11 +63,15 @@
           padding: 0px;
           margin: 0px;
           list-style: none;
+          animation-delay: 2.5s;
           li {
             list-style: none;
             display: inline;
             padding-right: 4rem;
             right: 0rem;
+            opacity: 1;
+            animation: animate3 1s linear;
+            animation-delay: calc(2s + (0.2s * var(--i)));
             a {
               font-size: 2rem;
               letter-spacing: 2px;
@@ -186,6 +191,7 @@
           margin: 0;
           bottom: 0rem;
           padding: 0;
+          
           li {
             display: list-item;
             padding: 1.5rem;
@@ -193,6 +199,8 @@
               i {
                 font-size: 2.5rem;
                 color: rgba(255, 255, 255, 0.5);
+                animation: animate8 1s linear;
+                animation-delay: calc(0.1s * var(--i));
               }
               i:hover {
                 color: #64ffda;
@@ -214,6 +222,7 @@
           height: 12rem;
           background: rgba(255, 255, 255, 0.5);
           margin: 0 auto;
+          animation: animate7 1s linear;
         }
       }
       // .line {
@@ -234,6 +243,9 @@
         font-size: 2rem;
         font-weight: 400;
         color: #64ffda;
+        opacity: 1;
+        animation: animate5 1s linear;
+        animation-delay: 3s;
       }
       h2 {
         position: absolute;
@@ -242,6 +254,9 @@
         font-size: 7rem;
         font-weight: 600;
         color: #fff;
+        opacity: 1;
+        animation: animate6 1s linear;
+        animation-delay: 4s;
       }
       h3 {
         position: absolute;
@@ -250,6 +265,9 @@
         font-size: 7rem;
         font-weight: 600;
         color: rgba(255, 255, 255, 0.5);
+        opacity: 1;
+        animation: animate5 1s linear;
+        animation-delay: 5s;
       }
       .para {
         position: absolute;
@@ -257,6 +275,9 @@
         left: 23%;
         height: 30rem;
         width: 50rem;
+        opacity: 1;
+        animation: animate6 1s linear;
+        animation-delay: 6s;
         p {
           font-size: 1.7rem;
           font-weight: 400;
@@ -299,6 +320,7 @@
       box-align: center;
       justify-content: center;
       flex-direction: column;
+      
       a {
         position: relative;
         text-decoration-skip-ink: auto;
@@ -309,17 +331,14 @@
         font-size: 1.6rem;
         letter-spacing: 3px;
         color: rgba(255, 255, 255, 0.4);
+        span{
+          animation: animate9 1s linear;
+          animation-delay: calc(0.1s * var(--i));
+        }
       }
       :hover {
         color: #64ffda;
       }
-      // .line {
-      //   position: absolute;
-      //   bottom: 0rem;
-      //   height: 11rem;
-      //   width: 1px;
-      //   background: rgba(255, 255, 255, 0.5);
-      // }
     }
     .mail::after {
       content: "";
@@ -328,6 +347,7 @@
       height: 12rem;
       background: rgba(255, 255, 255, 0.5);
       margin: 0 auto;
+      animation: animate7 1s linear;
     }
   }
   .about {
@@ -344,6 +364,8 @@
       font-size: 3rem;
       letter-spacing: 2px;
       color: #fff;
+      animation: animate10 3s linear;
+      animation-delay: 7s;
     }
     h4::after {
       content: "";
@@ -363,6 +385,7 @@
         height: 20rem;
         width: 50rem;
         margin-right: 3.5rem;
+        animation: animate5 1s linear;
         p {
           font-size: 1.7rem;
           font-weight: 400;
@@ -401,6 +424,7 @@
           saturate(700%) contrast(1);
         z-index: 1;
         transition: 0.5s;
+        animation: animate6 1s linear;
         img {
           border-radius: 0.5rem;
         }
@@ -441,6 +465,7 @@
       transform: translateY(-32rem);
       font-size: 3rem;
       color: #fff;
+      animation: animate10 3s linear;
     }
     h4::after {
       content: "";
@@ -464,6 +489,8 @@
         background: transparent;
         transform-style: preserve-3d;
         cursor: pointer;
+        animation: animate10 1.2s linear;
+        animation-delay: calc(0.2s * var(--i));
         .name {
           position: absolute;
           top: 2rem;
@@ -505,6 +532,7 @@
       transform: translateY(-25rem);
       font-size: 3rem;
       color: #fff;
+      animation: animate10 3s linear;
     }
     h4::after {
       content: "";
@@ -522,6 +550,7 @@
         padding-left: 20rem;
         font-size: 3rem;
         color: rgba(255, 255, 255, 0.5);
+        animation: animate5 1s linear;
         span {
           font-size: 5rem;
           color: #fff;
@@ -537,6 +566,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        animation: animate6 1s linear;
         .inner {
           padding: 2.5rem;
           background: transparent;
@@ -1727,5 +1757,91 @@
   }
   100% {
     filter: hue-rotate(360deg);
+  }
+}
+@keyframes animate3 {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes animate4 {
+  0% {
+    opacity: 0;
+    font-size: 54rem;
+  }
+  100% {
+    opacity: 1;
+    font-size: 3rem;
+  }
+}
+@keyframes animate5 {
+  0% {
+    opacity: 0;
+    transform: translateX(-5rem);
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes animate6 {
+  0% {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes animate7 {
+  0% {
+    opacity: 0;
+    transform: translateY(15rem);
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+@keyframes animate8 {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes animate9 {
+  0% {
+    opacity: 0;
+    font-size: 2.5rem
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animate10 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

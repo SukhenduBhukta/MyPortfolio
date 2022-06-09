@@ -72,6 +72,8 @@
   letter-spacing: 2px;
   left: 2rem;
   top: 0.5rem;
+  -webkit-animation: animate4 2s linear;
+          animation: animate4 2s linear;
 }
 
 .maincontainer .head .navbar .logo h2 span {
@@ -104,6 +106,8 @@
   padding: 0px;
   margin: 0px;
   list-style: none;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 .maincontainer .head .navbar .point .navMenu li {
@@ -111,6 +115,11 @@
   display: inline;
   padding-right: 4rem;
   right: 0rem;
+  opacity: 1;
+  -webkit-animation: animate3 1s linear;
+          animation: animate3 1s linear;
+  -webkit-animation-delay: calc(2s + (0.2s * var(--i)));
+          animation-delay: calc(2s + (0.2s * var(--i)));
 }
 
 .maincontainer .head .navbar .point .navMenu li a {
@@ -296,6 +305,10 @@
 .maincontainer .home .icon .social ul li a i {
   font-size: 2.5rem;
   color: rgba(255, 255, 255, 0.5);
+  -webkit-animation: animate8 1s linear;
+          animation: animate8 1s linear;
+  -webkit-animation-delay: calc(0.1s * var(--i));
+          animation-delay: calc(0.1s * var(--i));
 }
 
 .maincontainer .home .icon .social ul li a i:hover {
@@ -320,6 +333,8 @@
   height: 12rem;
   background: rgba(255, 255, 255, 0.5);
   margin: 0 auto;
+  -webkit-animation: animate7 1s linear;
+          animation: animate7 1s linear;
 }
 
 .maincontainer .home .details {
@@ -334,6 +349,11 @@
   font-size: 2rem;
   font-weight: 400;
   color: #64ffda;
+  opacity: 1;
+  -webkit-animation: animate5 1s linear;
+          animation: animate5 1s linear;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .maincontainer .home .details h2 {
@@ -343,6 +363,11 @@
   font-size: 7rem;
   font-weight: 600;
   color: #fff;
+  opacity: 1;
+  -webkit-animation: animate6 1s linear;
+          animation: animate6 1s linear;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 
 .maincontainer .home .details h3 {
@@ -352,6 +377,11 @@
   font-size: 7rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  -webkit-animation: animate5 1s linear;
+          animation: animate5 1s linear;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 .maincontainer .home .details .para {
@@ -360,6 +390,11 @@
   left: 23%;
   height: 30rem;
   width: 50rem;
+  opacity: 1;
+  -webkit-animation: animate6 1s linear;
+          animation: animate6 1s linear;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
 }
 
 .maincontainer .home .details .para p {
@@ -438,6 +473,13 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
+.maincontainer .home .mail a span {
+  -webkit-animation: animate9 1s linear;
+          animation: animate9 1s linear;
+  -webkit-animation-delay: calc(0.1s * var(--i));
+          animation-delay: calc(0.1s * var(--i));
+}
+
 .maincontainer .home .mail :hover {
   color: #64ffda;
 }
@@ -449,6 +491,8 @@
   height: 12rem;
   background: rgba(255, 255, 255, 0.5);
   margin: 0 auto;
+  -webkit-animation: animate7 1s linear;
+          animation: animate7 1s linear;
 }
 
 .maincontainer .about {
@@ -474,6 +518,10 @@
   font-size: 3rem;
   letter-spacing: 2px;
   color: #fff;
+  -webkit-animation: animate10 3s linear;
+          animation: animate10 3s linear;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
 }
 
 .maincontainer .about h4::after {
@@ -504,6 +552,8 @@
   height: 20rem;
   width: 50rem;
   margin-right: 3.5rem;
+  -webkit-animation: animate5 1s linear;
+          animation: animate5 1s linear;
 }
 
 .maincontainer .about .detail .abt p {
@@ -547,6 +597,8 @@
   z-index: 1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -webkit-animation: animate6 1s linear;
+          animation: animate6 1s linear;
 }
 
 .maincontainer .about .detail .pic img {
@@ -601,6 +653,8 @@
           transform: translateY(-32rem);
   font-size: 3rem;
   color: #fff;
+  -webkit-animation: animate10 3s linear;
+          animation: animate10 3s linear;
 }
 
 .maincontainer .skill h4::after {
@@ -634,6 +688,10 @@
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   cursor: pointer;
+  -webkit-animation: animate10 1.2s linear;
+          animation: animate10 1.2s linear;
+  -webkit-animation-delay: calc(0.2s * var(--i));
+          animation-delay: calc(0.2s * var(--i));
 }
 
 .maincontainer .skill .cardcontainer .card .name {
@@ -691,6 +749,8 @@
           transform: translateY(-25rem);
   font-size: 3rem;
   color: #fff;
+  -webkit-animation: animate10 3s linear;
+          animation: animate10 3s linear;
 }
 
 .maincontainer .contact h4::after {
@@ -713,6 +773,8 @@
   padding-left: 20rem;
   font-size: 3rem;
   color: rgba(255, 255, 255, 0.5);
+  -webkit-animation: animate5 1s linear;
+          animation: animate5 1s linear;
 }
 
 .maincontainer .contact .word p span {
@@ -737,6 +799,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: animate6 1s linear;
+          animation: animate6 1s linear;
 }
 
 .maincontainer .contact .getintch .wrapper .inner {
@@ -2048,6 +2112,214 @@
   100% {
     -webkit-filter: hue-rotate(360deg);
             filter: hue-rotate(360deg);
+  }
+}
+
+@-webkit-keyframes animate3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+            transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+            transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+@-webkit-keyframes animate4 {
+  0% {
+    opacity: 0;
+    font-size: 54rem;
+  }
+  100% {
+    opacity: 1;
+    font-size: 3rem;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    opacity: 0;
+    font-size: 54rem;
+  }
+  100% {
+    opacity: 1;
+    font-size: 3rem;
+  }
+}
+
+@-webkit-keyframes animate5 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@keyframes animate5 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@-webkit-keyframes animate6 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(15rem);
+            transform: translateX(15rem);
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@keyframes animate6 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(15rem);
+            transform: translateX(15rem);
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@-webkit-keyframes animate7 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(15rem);
+            transform: translateY(15rem);
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@keyframes animate7 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(15rem);
+            transform: translateY(15rem);
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@-webkit-keyframes animate8 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+            transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+@keyframes animate8 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+            transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+}
+
+@-webkit-keyframes animate9 {
+  0% {
+    opacity: 0;
+    font-size: 2.5rem;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate9 {
+  0% {
+    opacity: 0;
+    font-size: 2.5rem;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animate10 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate10 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
