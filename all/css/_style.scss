@@ -259,7 +259,7 @@
     }
   }
   .home {
-    //position: relative;
+    position: relative;
     min-height: 100vh;
     width: 100%;
     background: rgb(6, 19, 55);
@@ -479,8 +479,8 @@
         width: 10rem;
         .cube {
           position: relative;
-          width: 10rem;
-          height: 10rem;
+          width: 8rem;
+          height: 8rem;
           transform-style: preserve-3d;
           transform: rotateX(-30deg);
           animation: animate11 4s linear infinite;
@@ -491,7 +491,7 @@
             width: 100%;
             height: 100%;
             background: #222;
-            transform: rotateX(90deg) translateZ(5rem);
+            transform: rotateX(90deg) translateZ(4rem);
           }
           .top::before {
             content: "";
@@ -501,11 +501,11 @@
             width: 100%;
             height: 100%;
             background: #00ffae;
-            transform: translateZ(-13rem);
+            transform: translateZ(-10rem);
             filter: blur(20px);
-            box-shadow: 0 0 12rem rgba(0, 255, 179, 0.25),
-              0 0 20rem rgba(0, 255, 179, 0.5),
-              0 0 30rem rgba(0, 255, 179, 0.75), 0 0 40rem rgba(0, 255, 179, 1);
+            box-shadow: 0 0 8rem rgba(0, 255, 179, 0.25),
+              0 0 9rem rgba(0, 255, 179, 0.5),
+              0 0 10rem rgba(0, 255, 179, 0.75), 0 0 40rem rgba(0, 255, 179, 1);
           }
           div {
             position: absolute;
@@ -521,7 +521,7 @@
               width: 100%;
               height: 100%;
               background: linear-gradient(#151515, #00ffa6);
-              transform: rotateY(calc(90deg * var(--i))) translateZ(5rem);
+              transform: rotateY(calc(90deg * var(--i))) translateZ(4rem);
             }
           }
         }
@@ -570,7 +570,7 @@
     }
   }
   .about {
-    //position: relative;
+    position: relative;
     min-height: 100vh;
     width: 100%;
     background: rgb(6, 19, 55);
@@ -1921,7 +1921,7 @@
         }
         .rotator2 {
           right: 13rem;
-          bottom: 7rem;
+          bottom: 10rem;
         }
       }
       .mail {

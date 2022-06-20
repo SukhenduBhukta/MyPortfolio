@@ -331,6 +331,7 @@
 }
 
 .maincontainer .home {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   background: #061337;
@@ -634,8 +635,8 @@
 
 .maincontainer .home .details .rotator2 .cube {
   position: relative;
-  width: 10rem;
-  height: 10rem;
+  width: 8rem;
+  height: 8rem;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transform: rotateX(-30deg);
@@ -651,8 +652,8 @@
   width: 100%;
   height: 100%;
   background: #222;
-  -webkit-transform: rotateX(90deg) translateZ(5rem);
-          transform: rotateX(90deg) translateZ(5rem);
+  -webkit-transform: rotateX(90deg) translateZ(4rem);
+          transform: rotateX(90deg) translateZ(4rem);
 }
 
 .maincontainer .home .details .rotator2 .cube .top::before {
@@ -663,12 +664,12 @@
   width: 100%;
   height: 100%;
   background: #00ffae;
-  -webkit-transform: translateZ(-13rem);
-          transform: translateZ(-13rem);
+  -webkit-transform: translateZ(-10rem);
+          transform: translateZ(-10rem);
   -webkit-filter: blur(20px);
           filter: blur(20px);
-  -webkit-box-shadow: 0 0 12rem rgba(0, 255, 179, 0.25), 0 0 20rem rgba(0, 255, 179, 0.5), 0 0 30rem rgba(0, 255, 179, 0.75), 0 0 40rem #00ffb3;
-          box-shadow: 0 0 12rem rgba(0, 255, 179, 0.25), 0 0 20rem rgba(0, 255, 179, 0.5), 0 0 30rem rgba(0, 255, 179, 0.75), 0 0 40rem #00ffb3;
+  -webkit-box-shadow: 0 0 8rem rgba(0, 255, 179, 0.25), 0 0 9rem rgba(0, 255, 179, 0.5), 0 0 10rem rgba(0, 255, 179, 0.75), 0 0 40rem #00ffb3;
+          box-shadow: 0 0 8rem rgba(0, 255, 179, 0.25), 0 0 9rem rgba(0, 255, 179, 0.5), 0 0 10rem rgba(0, 255, 179, 0.75), 0 0 40rem #00ffb3;
 }
 
 .maincontainer .home .details .rotator2 .cube div {
@@ -689,8 +690,8 @@
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#00ffa6));
   background: linear-gradient(#151515, #00ffa6);
-  -webkit-transform: rotateY(calc(90deg * var(--i))) translateZ(5rem);
-          transform: rotateY(calc(90deg * var(--i))) translateZ(5rem);
+  -webkit-transform: rotateY(calc(90deg * var(--i))) translateZ(4rem);
+          transform: rotateY(calc(90deg * var(--i))) translateZ(4rem);
 }
 
 .maincontainer .home .mail {
@@ -755,6 +756,7 @@
 }
 
 .maincontainer .about {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   background: #061337;
@@ -2282,7 +2284,7 @@
   }
   .maincontainer .home .details .rotator2 {
     right: 13rem;
-    bottom: 7rem;
+    bottom: 10rem;
   }
   .maincontainer .home .mail {
     display: none;
