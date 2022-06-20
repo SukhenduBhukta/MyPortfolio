@@ -471,7 +471,7 @@
       .rotator2 {
         position: absolute;
         right: 20rem;
-        bottom: 5rem;
+        bottom: 10rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1037,6 +1037,10 @@
         }
         .para {
           left: 15%;
+        }
+        .rotator2{
+          bottom: 5rem;
+          right: 10rem;
         }
       }
     }

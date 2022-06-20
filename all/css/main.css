@@ -619,7 +619,7 @@
 .maincontainer .home .details .rotator2 {
   position: absolute;
   right: 20rem;
-  bottom: 5rem;
+  bottom: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1370,6 +1370,10 @@
   }
   .maincontainer .home .details .para {
     left: 15%;
+  }
+  .maincontainer .home .details .rotator2 {
+    bottom: 5rem;
+    right: 10rem;
   }
   .maincontainer .about h4 {
     left: 15%;
