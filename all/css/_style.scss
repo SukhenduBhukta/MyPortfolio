@@ -259,6 +259,7 @@
     }
   }
   .home {
+    position: relative;
     min-height: 100vh;
     width: 100%;
     background: rgb(6, 19, 55);
@@ -273,6 +274,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 100;
       .social {
         position: relative;
         top: 14rem;
@@ -536,7 +538,7 @@
       box-align: center;
       justify-content: center;
       flex-direction: column;
-
+      z-index: 100;
       a {
         position: relative;
         text-decoration-skip-ink: auto;
@@ -568,6 +570,7 @@
     }
   }
   .about {
+    //position: relative;
     min-height: 100vh;
     width: 100%;
     background: rgb(6, 19, 55);
@@ -669,6 +672,7 @@
     }
   }
   .skill {
+    position: relative;
     min-height: 100vh;
     width: 100%;
     background: rgb(6, 19, 55);
@@ -736,6 +740,7 @@
     }
   }
   .contact {
+    position: relative;
     min-height: 100vh;
     width: 100%;
     background: rgb(6, 19, 55);
@@ -2001,6 +2006,7 @@
         width: 100%;
         .wrapper {
           padding-bottom: 5rem;
+          margin-top: 0rem;
           .contain {
             width: 100%;
           }

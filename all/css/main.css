@@ -331,6 +331,7 @@
 }
 
 .maincontainer .home {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   background: #061337;
@@ -359,6 +360,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 100;
 }
 
 .maincontainer .home .icon .social {
@@ -712,6 +714,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 100;
 }
 
 .maincontainer .home .mail a {
@@ -888,6 +891,7 @@
 }
 
 .maincontainer .skill {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   background: #061337;
@@ -984,6 +988,7 @@
 }
 
 .maincontainer .contact {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   background: #061337;
@@ -2369,6 +2374,7 @@
   }
   .maincontainer .contact .getintch .wrapper {
     padding-bottom: 5rem;
+    margin-top: 0rem;
   }
   .maincontainer .contact .getintch .wrapper .contain {
     width: 100%;
