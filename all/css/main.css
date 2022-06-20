@@ -573,7 +573,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #061337;
+  background: #000f33;
   -webkit-transform: rotateX(90deg) translateZ(5rem);
           transform: rotateX(90deg) translateZ(5rem);
 }
@@ -651,7 +651,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #061337;
+  background: #000f33;
   -webkit-transform: rotateX(90deg) translateZ(4rem);
           transform: rotateX(90deg) translateZ(4rem);
 }
