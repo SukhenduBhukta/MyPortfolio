@@ -573,7 +573,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #222;
+  background: #061337;
   -webkit-transform: rotateX(90deg) translateZ(5rem);
           transform: rotateX(90deg) translateZ(5rem);
 }
@@ -610,8 +610,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#00ffa6));
-  background: linear-gradient(#151515, #00ffa6);
+  background: -webkit-gradient(linear, left top, left bottom, from(#08052e), to(#00ffa6));
+  background: linear-gradient(#08052e, #00ffa6);
   -webkit-transform: rotateY(calc(90deg * var(--i))) translateZ(5rem);
           transform: rotateY(calc(90deg * var(--i))) translateZ(5rem);
 }
@@ -651,7 +651,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #222;
+  background: #061337;
   -webkit-transform: rotateX(90deg) translateZ(4rem);
           transform: rotateX(90deg) translateZ(4rem);
 }
@@ -688,8 +688,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#00ffa6));
-  background: linear-gradient(#151515, #00ffa6);
+  background: -webkit-gradient(linear, left top, left bottom, from(#08052e), to(#00ffa6));
+  background: linear-gradient(#08052e, #00ffa6);
   -webkit-transform: rotateY(calc(90deg * var(--i))) translateZ(4rem);
           transform: rotateY(calc(90deg * var(--i))) translateZ(4rem);
 }
