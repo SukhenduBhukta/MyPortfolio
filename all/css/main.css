@@ -331,7 +331,6 @@
 }
 
 .maincontainer .home {
-  position: relative;
   min-height: 100vh;
   width: 100%;
   background: #061337;
@@ -2283,7 +2282,7 @@
   }
   .maincontainer .home .details .rotator2 {
     right: 13rem;
-    bottom: 10rem;
+    bottom: 7rem;
   }
   .maincontainer .home .mail {
     display: none;
