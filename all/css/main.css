@@ -133,8 +133,9 @@
   position: relative;
 }
 
-.maincontainer .head .navbar .point .navMenu li a span::after, .maincontainer .head .navbar .point .navMenu li a span::before {
-  content: '';
+.maincontainer .head .navbar .point .navMenu li a span::after,
+.maincontainer .head .navbar .point .navMenu li a span::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 2px;
@@ -142,10 +143,10 @@
   background: #64ffda;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .maincontainer .head .navbar .point .navMenu li a span::after {
@@ -170,7 +171,60 @@
   color: #d0ff00;
 }
 
-.maincontainer .head .navbar .point .navMenu li .resume {
+.maincontainer .head .navbar .point .navMenu li .button {
+  --width: 11rem;
+  --height: 3.6rem;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: calc(
+                var(--tooltip-height) + 3px
+              );
+  --button-color: #1163ff;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45rem;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.maincontainer .head .navbar .point .navMenu li .button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 1rem;
+  color: #111;
+  border-radius: 0.25em;
+  line-height: var(--tooltip-height);
+  bottom: calc( var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.maincontainer .head .navbar .point .navMenu li .button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc( var(--height) + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.maincontainer .head .navbar .point .navMenu li .button::after,
+.maincontainer .head .navbar .point .navMenu li .button::before {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.maincontainer .head .navbar .point .navMenu li .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,28 +234,71 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  right: 0.1rem;
-  height: 4rem;
-  width: 11rem;
-  border: none;
-  border: 1px solid #64ffda;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  background: transparent;
-  -webkit-animation: animate2 2s ease-in-out infinite;
-          animation: animate2 2s ease-in-out infinite;
-}
-
-.maincontainer .head .navbar .point .navMenu li .resume a {
   font-size: 2rem;
-  color: #fff;
-  font-weight: 450;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 
-.maincontainer .head .navbar .point .navMenu li .resume:hover {
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+.maincontainer .head .navbar .point .navMenu li .button-wrapper,
+.maincontainer .head .navbar .point .navMenu li .text,
+.maincontainer .head .navbar .point .navMenu li .icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.maincontainer .head .navbar .point .navMenu li .text {
+  top: 0;
+}
+
+.maincontainer .head .navbar .point .navMenu li .text,
+.maincontainer .head .navbar .point .navMenu li .icon {
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
+}
+
+.maincontainer .head .navbar .point .navMenu li .icon {
+  color: #0a192f;
+  top: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+}
+
+.maincontainer .head .navbar .point .navMenu li .button:hover {
+  background: #64ffda;
+}
+
+.maincontainer .head .navbar .point .navMenu li .button:hover .text {
+  top: -100%;
+}
+
+.maincontainer .head .navbar .point .navMenu li .button:hover .icon {
+  top: 0;
+}
+
+.maincontainer .head .navbar .point .navMenu li .button:hover:before,
+.maincontainer .head .navbar .point .navMenu li .button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.maincontainer .head .navbar .point .navMenu li .button:hover:after {
+  bottom: calc( var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.maincontainer .head .navbar .point .navMenu li .button:hover:before {
+  bottom: calc( var(--height) + var(--gap-between-tooltip-to-button));
 }
 
 .maincontainer .head .navbar .point .navMenu .navList:last-child {
@@ -309,6 +406,8 @@
           animation: animate8 1s linear;
   -webkit-animation-delay: calc(0.1s * var(--i));
           animation-delay: calc(0.1s * var(--i));
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .maincontainer .home .icon .social ul li a i:hover {
@@ -339,7 +438,8 @@
 
 .maincontainer .home .details {
   width: 80%;
-  height: 100%;
+  height: 80vh;
+  margin-top: 5rem;
 }
 
 .maincontainer .home .details h4 {
@@ -412,7 +512,7 @@
 }
 
 .maincontainer .home .details .para p a span::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 90%;
   height: 1px;
@@ -420,10 +520,10 @@
   background: #64ffda;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .maincontainer .home .details .para p a span::after {
@@ -435,6 +535,161 @@
 .maincontainer .home .details .para p a span:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.maincontainer .home .details .rotator {
+  position: relative;
+  left: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10rem;
+  width: 10rem;
+}
+
+.maincontainer .home .details .rotator .cube {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-30deg);
+          transform: rotateX(-30deg);
+  -webkit-animation: animate11 4s linear infinite;
+          animation: animate11 4s linear infinite;
+}
+
+.maincontainer .home .details .rotator .cube .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  -webkit-transform: rotateX(90deg) translateZ(5rem);
+          transform: rotateX(90deg) translateZ(5rem);
+}
+
+.maincontainer .home .details .rotator .cube .top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00ffae;
+  -webkit-transform: translateZ(-13rem);
+          transform: translateZ(-13rem);
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  -webkit-box-shadow: 0 0 12rem rgba(0, 255, 179, 0.25), 0 0 20rem rgba(0, 255, 179, 0.5), 0 0 30rem rgba(0, 255, 179, 0.75), 0 0 40rem #00ffb3;
+          box-shadow: 0 0 12rem rgba(0, 255, 179, 0.25), 0 0 20rem rgba(0, 255, 179, 0.5), 0 0 30rem rgba(0, 255, 179, 0.75), 0 0 40rem #00ffb3;
+}
+
+.maincontainer .home .details .rotator .cube div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.maincontainer .home .details .rotator .cube div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#00ffa6));
+  background: linear-gradient(#151515, #00ffa6);
+  -webkit-transform: rotateY(calc(90deg * var(--i))) translateZ(5rem);
+          transform: rotateY(calc(90deg * var(--i))) translateZ(5rem);
+}
+
+.maincontainer .home .details .rotator2 {
+  position: absolute;
+  right: 20rem;
+  bottom: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10rem;
+  width: 10rem;
+}
+
+.maincontainer .home .details .rotator2 .cube {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(-30deg);
+          transform: rotateX(-30deg);
+  -webkit-animation: animate11 4s linear infinite;
+          animation: animate11 4s linear infinite;
+}
+
+.maincontainer .home .details .rotator2 .cube .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  -webkit-transform: rotateX(90deg) translateZ(5rem);
+          transform: rotateX(90deg) translateZ(5rem);
+}
+
+.maincontainer .home .details .rotator2 .cube .top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00ffae;
+  -webkit-transform: translateZ(-13rem);
+          transform: translateZ(-13rem);
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  -webkit-box-shadow: 0 0 12rem rgba(0, 255, 179, 0.25), 0 0 20rem rgba(0, 255, 179, 0.5), 0 0 30rem rgba(0, 255, 179, 0.75), 0 0 40rem #00ffb3;
+          box-shadow: 0 0 12rem rgba(0, 255, 179, 0.25), 0 0 20rem rgba(0, 255, 179, 0.5), 0 0 30rem rgba(0, 255, 179, 0.75), 0 0 40rem #00ffb3;
+}
+
+.maincontainer .home .details .rotator2 .cube div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.maincontainer .home .details .rotator2 .cube div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#00ffa6));
+  background: linear-gradient(#151515, #00ffa6);
+  -webkit-transform: rotateY(calc(90deg * var(--i))) translateZ(5rem);
+          transform: rotateY(calc(90deg * var(--i))) translateZ(5rem);
 }
 
 .maincontainer .home .mail {
@@ -471,6 +726,8 @@
   font-size: 1.6rem;
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .maincontainer .home .mail a span {
@@ -789,6 +1046,7 @@
 
 .maincontainer .contact .getintch .wrapper {
   height: 100%;
+  margin-top: 20rem;
   background: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -803,183 +1061,216 @@
           animation: animate6 1s linear;
 }
 
-.maincontainer .contact .getintch .wrapper .inner {
-  padding: 2.5rem;
-  background: transparent;
-  -webkit-box-shadow: inset 3px 3px 15px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 3px 3px 15px rgba(0, 0, 0, 0.5);
-  max-width: 80rem;
-  margin: auto;
-  border-radius: 1.5rem;
+.maincontainer .contact .getintch .wrapper .contain {
+  height: 100%;
+  width: 60%;
+  padding: 3rem;
+  margin: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #060338;
+  border-radius: 10px;
+  gap: 30px;
 }
 
-.maincontainer .contact .getintch .wrapper .inner form {
-  width: 100%;
-  padding-top: 4rem;
-  padding-left: 0;
-  padding-right: 3rem;
-  display: -ms-grid;
-  display: grid;
-}
-
-.maincontainer .contact .getintch .wrapper .inner form .form-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.maincontainer .contact .getintch .wrapper .inner form .form-group input {
-  width: 100%;
-  background-color: transparent;
-  caret-color: #00dafc;
-  color: #00dafc;
-  letter-spacing: 2px;
-  font-weight: 500;
-}
-
-.maincontainer .contact .getintch .wrapper .inner form .form-group .form-control {
-  border: none;
-  border-bottom: 1px solid #64ffda;
-  display: block;
-  width: 100%;
-  height: 30px;
-  padding-right: 0;
-  margin-bottom: 25px;
-}
-
-.maincontainer .contact .getintch .wrapper .inner form .form-wrapper {
+.maincontainer .contact .getintch .wrapper .contain .inputbox {
   position: relative;
-}
-
-.maincontainer .contact .getintch .wrapper .inner form .form-wrapper input {
-  background-color: transparent;
-  caret-color: #00dafc;
-  color: #00dafc;
-  letter-spacing: 2px;
-  font-weight: 500;
-}
-
-.maincontainer .contact .getintch .wrapper .inner form .form-wrapper textarea {
-  background-color: transparent;
-  caret-color: #00dafc;
-  color: #00dafc;
-  letter-spacing: 2px;
-  font-weight: 500;
-  outline: none;
-  border: none;
-  max-width: 50rem;
-}
-
-.maincontainer .contact .getintch .wrapper .inner form .form-wrapper .form-control {
-  border: none;
-  border-bottom: 1px solid #64ffda;
-  display: block;
   width: 100%;
-  height: 30px;
-  padding-right: 0;
-  margin-bottom: 25px;
 }
 
-.maincontainer .contact .getintch .wrapper .inner form .buttdiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 2rem;
+.maincontainer .contact .getintch .wrapper .contain .inputbox input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1.2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.maincontainer .contact .getintch .wrapper .inner form .buttdiv button {
-  font-family: inherit;
-  font-size: 1.5rem;
-  color: white;
-  background: linear-gradient(45deg, #dff304, #00ffbf);
-  -webkit-box-shadow: inset 4px 4px 6px rgba(255, 255, 255, 0.9), inset -4px -4px 6px rgba(0, 0, 0, 0.7);
-          box-shadow: inset 4px 4px 6px rgba(255, 255, 255, 0.9), inset -4px -4px 6px rgba(0, 0, 0, 0.7);
-  padding: 0.5rem 1.5rem;
-  padding-left: 0.9em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: none;
-  border-radius: 1.6rem 0;
-  overflow: hidden;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+.maincontainer .contact .getintch .wrapper .contain .inputbox input:valid ~ span,
+.maincontainer .contact .getintch .wrapper .contain .inputbox input:focus ~ span {
+  color: #64ffda;
+  -webkit-transform: translateX(10px) translateY(-7px);
+          transform: translateX(10px) translateY(-7px);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 2px 10px;
+  background: #060338;
+  border-left: 2px solid #64ffda;
+  border-right: 2px solid #64ffda;
+  letter-spacing: 1px;
 }
 
-.maincontainer .contact .getintch .wrapper .inner form .buttdiv button span {
-  display: block;
-  margin-left: 0.3em;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+.maincontainer .contact .getintch .wrapper .contain .inputbox input:valid,
+.maincontainer .contact .getintch .wrapper .contain .inputbox input:focus {
+  border: 2px solid #64ffda;
 }
 
-.maincontainer .contact .getintch .wrapper .inner form .buttdiv button svg {
-  display: block;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+.maincontainer .contact .getintch .wrapper .contain .inputbox span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-.maincontainer .contact .getintch .wrapper .inner form .buttdiv button:hover .svg-wrapper {
-  -webkit-animation: fly-1 0.6s ease-in-out infinite alternate;
-          animation: fly-1 0.6s ease-in-out infinite alternate;
+.maincontainer .contact .getintch .wrapper .contain .inputbox textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.maincontainer .contact .getintch .wrapper .inner form .buttdiv button:hover svg {
-  -webkit-transform: translateX(1.8rem) rotate(45deg) scale(1.1);
-          transform: translateX(1.8rem) rotate(45deg) scale(1.1);
+.maincontainer .contact .getintch .wrapper .contain .inputbox textarea:valid ~ span,
+.maincontainer .contact .getintch .wrapper .contain .inputbox textarea:focus ~ span {
+  -webkit-transform: translateX(10px) translateY(-7px);
+          transform: translateX(10px) translateY(-7px);
+  font-size: 1rem;
+  padding: 2px 10px;
+  background: #64ffda;
+  border-left: 2px solid #64ffda;
+  border-right: 2px solid #64ffda;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #060338;
+  border-radius: 2px;
 }
 
-.maincontainer .contact .getintch .wrapper .inner form .buttdiv button:hover span {
-  -webkit-transform: translateX(10rem);
-          transform: translateX(10rem);
+.maincontainer .contact .getintch .wrapper .contain .inputbox textarea:valid,
+.maincontainer .contact .getintch .wrapper .contain .inputbox textarea:focus {
+  border: 2px solid #64ffda;
 }
 
-.maincontainer .contact .getintch .wrapper .inner form .buttdiv button:active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+.maincontainer .contact .getintch .wrapper .contain .inputbox:nth-child(2) textarea:valid ~ span,
+.maincontainer .contact .getintch .wrapper .contain .inputbox:nth-child(2) textarea:focus ~ span {
+  background: #64ffda;
+  color: #060338;
+  border-radius: 2px;
 }
 
-@-webkit-keyframes fly-1 {
-  from {
-    -webkit-transform: translateY(0.3rem);
-            transform: translateY(0.3rem);
-  }
-  to {
-    -webkit-transform: translateY(-0.3rem);
-            transform: translateY(-0.3rem);
-  }
+.maincontainer .contact .getintch .wrapper .contain .btn button {
+  cursor: pointer;
+  background: transparent;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 1rem;
+  width: 13rem;
+  height: 5rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
-@keyframes fly-1 {
-  from {
-    -webkit-transform: translateY(0.3rem);
-            transform: translateY(0.3rem);
-  }
-  to {
-    -webkit-transform: translateY(-0.3rem);
-            transform: translateY(-0.3rem);
-  }
+.maincontainer .contact .getintch .wrapper .contain .btn button:hover {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+  color: #060338;
+}
+
+.maincontainer .contact .getintch .wrapper .contain .btn button span {
+  position: relative;
+  z-index: 100;
+}
+
+.maincontainer .contact .getintch .wrapper .contain .btn button::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #64ffda;
+  -webkit-box-shadow: 5px -8px 0 #64ffda, 5px 8px 0 #64ffda;
+          box-shadow: 5px -8px 0 #64ffda, 5px 8px 0 #64ffda;
+  -webkit-transition: width 0.5s, left 0.5s, height 0.5s, -webkit-box-shadow 0.5s;
+  transition: width 0.5s, left 0.5s, height 0.5s, -webkit-box-shadow 0.5s;
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  -webkit-transition-delay: 1s, 0.5s, 0s, 0s;
+          transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.maincontainer .contact .getintch .wrapper .contain .btn button:hover::before {
+  width: 65%;
+  height: 105%;
+  /* right: -2px; */
+  left: -2px;
+  border-radius: 1rem;
+  -webkit-box-shadow: 5px 0 0 #64ffda, 5px 0 0 #64ffda;
+          box-shadow: 5px 0 0 #64ffda, 5px 0 0 #64ffda;
+  -webkit-transition-delay: 0s, 0.5s, 1s, 1s;
+          transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+.maincontainer .contact .getintch .wrapper .contain .btn button::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #64ffda;
+  -webkit-box-shadow: -5px -8px 0 #64ffda, -5px 8px 0 #64ffda;
+          box-shadow: -5px -8px 0 #64ffda, -5px 8px 0 #64ffda;
+  -webkit-transition: width 0.5s, right 0.5s, height 0.5s, -webkit-box-shadow 0.5s;
+  transition: width 0.5s, right 0.5s, height 0.5s, -webkit-box-shadow 0.5s;
+  transition: width 0.5s, right 0.5s, height 0.5s, box-shadow 0.5s;
+  transition: width 0.5s, right 0.5s, height 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  -webkit-transition-delay: 1s, 0.5s, 0s, 0s;
+          transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.maincontainer .contact .getintch .wrapper .contain .btn button:hover::after {
+  width: 60%;
+  height: 105%;
+  right: -2px;
+  border-radius: 1rem;
+  -webkit-box-shadow: -5px 0 0 #64ffda, -5px 0 0 #64ffda;
+          box-shadow: -5px 0 0 #64ffda, -5px 0 0 #64ffda;
+  -webkit-transition-delay: 0s, 0.5s, 1s, 1s;
+          transition-delay: 0s, 0.5s, 1s, 1s;
 }
 
 .maincontainer .contact .getintch .form-group input:first-child {
@@ -1142,6 +1433,7 @@
   }
   .maincontainer .contact .getintch .wrapper {
     padding-bottom: 5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -1164,6 +1456,10 @@
   }
   .maincontainer .home .details .para p {
     font-size: 1.6rem;
+  }
+  .maincontainer .home .details .rotator2 {
+    right: 10rem;
+    bottom: 1rem;
   }
   .maincontainer .about {
     padding-top: 10rem;
@@ -1350,6 +1646,9 @@
   }
   .maincontainer .home .details .para p a {
     width: 10rem;
+  }
+  .maincontainer .home .details .rotator {
+    display: none;
   }
   .maincontainer .home .mail {
     display: none;
@@ -1551,6 +1850,9 @@
   .maincontainer .home .details .para p {
     font-size: 1.5rem;
   }
+  .maincontainer .home .details .rotator {
+    display: none;
+  }
   .maincontainer .home .mail {
     display: none;
     width: 0;
@@ -1644,8 +1946,8 @@
   .maincontainer .contact .getintch .wrapper {
     padding-bottom: 5rem;
   }
-  .maincontainer .contact .getintch .wrapper .inner {
-    min-width: 30rem;
+  .maincontainer .contact .getintch .wrapper .contain {
+    width: 70%;
   }
   .maincontainer .contact .social2 {
     display: -webkit-box;
@@ -1754,6 +2056,9 @@
   }
   .maincontainer .home .details .para p {
     font-size: 1.5rem;
+  }
+  .maincontainer .home .details .rotator {
+    display: none;
   }
   .maincontainer .home .mail {
     display: none;
@@ -1936,18 +2241,18 @@
   }
   .maincontainer .home .details h4 {
     left: 10%;
-    top: 21rem;
+    top: 15rem;
     right: 10%;
     font-size: 1.8rem;
   }
   .maincontainer .home .details h2 {
     left: 10%;
     right: 10%;
-    top: 23rem;
+    top: 17rem;
     font-size: 3rem;
   }
   .maincontainer .home .details h3 {
-    top: 28rem;
+    top: 21rem;
     left: 10%;
     right: 10%;
     font-size: 2.8rem;
@@ -1955,14 +2260,21 @@
   .maincontainer .home .details .para {
     left: 10%;
     right: 10%;
-    top: 37rem;
+    top: 29.5rem;
     width: 28rem;
   }
   .maincontainer .home .details .para p {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
   .maincontainer .home .details .para p a {
     width: 11.5rem;
+  }
+  .maincontainer .home .details .rotator {
+    display: none;
+  }
+  .maincontainer .home .details .rotator2 {
+    right: 13rem;
+    bottom: 7rem;
   }
   .maincontainer .home .mail {
     display: none;
@@ -2058,9 +2370,8 @@
   .maincontainer .contact .getintch .wrapper {
     padding-bottom: 5rem;
   }
-  .maincontainer .contact .getintch .wrapper .inner {
-    min-width: 30rem;
-    margin: 0 3rem;
+  .maincontainer .contact .getintch .wrapper .contain {
+    width: 100%;
   }
   .maincontainer .contact .social2 {
     display: -webkit-box;
@@ -2170,7 +2481,7 @@
             transform: translateX(-5rem);
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -2186,7 +2497,7 @@
             transform: translateX(-5rem);
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -2202,7 +2513,7 @@
             transform: translateX(15rem);
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -2218,7 +2529,7 @@
             transform: translateX(15rem);
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -2234,7 +2545,7 @@
             transform: translateY(15rem);
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -2250,7 +2561,7 @@
             transform: translateY(15rem);
   }
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -2320,6 +2631,28 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes animate11 {
+  0% {
+    -webkit-transform: rotateX(-30deg) rotateY(0deg);
+            transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-30deg) rotateY(360deg);
+            transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+@keyframes animate11 {
+  0% {
+    -webkit-transform: rotateX(-30deg) rotateY(0deg);
+            transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-30deg) rotateY(360deg);
+            transform: rotateX(-30deg) rotateY(360deg);
   }
 }
 
